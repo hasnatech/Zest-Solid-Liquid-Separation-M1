@@ -1,0 +1,48 @@
+<div class="fullpage">
+  <div class="para">
+    <p>Click to play video</p>
+  </div>
+
+  <div class="grid_container">
+    <div class="grid" *ngFor="let data of this.items;let i=index" [style.background-image]="'url('+data.image+')'">
+      <a class="play-btn" (click)="tab(i)">
+        <span class="play-icon">
+          <img src="assets/images/play_icon.png">
+        </span>
+      </a>
+      <div class="circle"></div>
+      <div class="text" [innerHtml]="data.text"></div>
+    </div>
+
+  </div>
+  <div *ngIf="showvideo" class="videoclass">
+    <div class="content">
+      <div *ngFor="let data of this.items;let i=index">
+
+        <iframe width="100%" [src]="data.link | safe:'resourceUrl'"
+          style="border-radius:17px;" *ngIf="selectedtab == i" class="iframe">
+        </iframe>
+
+
+        <!--<div class="framedata" *ngIf="selectedtab == i">
+          <div class="title">{{data.text}}</div>
+          <div class="tabcontent">
+            <div class="tabcontenttitle">
+              <div class="pros" (mousedown)="selectedItem = 1" [ngClass]="{'selected': selectedItem == 1}">Pros</div>
+              <div class="cons" (mousedown)="selectedItem = 2" [ngClass]="{'selected': selectedItem == 2}">Cons</div>
+            </div>
+            <div class="tabcontentdata" *ngIf="selectedItem == 1" [innerHtml]="data.pros"></div>
+            <div class="tabcontentdata" *ngIf="selectedItem == 2" [innerHtml]="data.cons"></div>
+          </div>
+          <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
+          <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon>
+        </div>-->
+
+      </div>
+    </div>
+    <div class="button" (click)="close()">
+      X
+    </div>
+
+  </div>
+</div>
