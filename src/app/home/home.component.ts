@@ -1,5 +1,16 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
+import {
+  DomSanitizer,
+  SafeHtml,
+  SafeStyle,
+  SafeScript,
+  SafeUrl,
+  SafeResourceUrl
+} from '@angular/platform-browser';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,90 +26,69 @@ export class HomeComponent implements OnInit {
   disabled = false;
   para = true;
   playVideo = false;
-  constructor(protected sanitizer: DomSanitizer) { }
+  constructor(protected sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
+
   }
-  items = [
-    {
-      image: "assets/images/decanter.png",
+  items = [{
+      image: "assets/images/Card1.png",
       videoimge: "assets/images/decanter_play.png",
-      text: "Decanter",
-      defn: `A decanter separates solids from one or two liquid phases in one single continuous process. This is done using centrifugal forces that can be well
-beyond 3000 times greater than gravity.`,
-      pros: `<ul><li>Flexibility in operation, can separate pectin with mother liquor until 35%, at different pH types and 
+      text: "Centrifugal separation",
+      text1: "Basics of Centrifugal separation",
+      defn: `Centrifugal force is used to induce separation.`,
+      pros: `<ul><li>Flexibility in operation, can separate pectin with mother liquor until 35%, at different pH types and
     pectin structures</li>
     <li>Dry matter 6–10% can  be reached which could improve nitrates washing and pH adjustment</li>
-    <li>Separated IPA is clean</li>
-    <li> Reduced fouling of heat exchanger, extended CIP<span class='red'>*</span> in column</li>
-    <li>Reduced pectin losses</li>
-    <li>Reliable technology, already proven and tested in Redon pilot plant</li>
-    <li>Flottweg shows better performance than Alfa Laval</li>
-    </ul>
-    <p class='red'>*Clean In Place</p>`,
-      cons: `<ul><li>High CAPEX<span class='red'>*</span> due to ATEX decanter, one Z6 decanter (12–14 m<sup>3</sup>/h) ~ 500–550k€</li>
-    <li>High maintenance and operational cost. Energy global power for Z6 is 55+15kW = 70kW</li></ul>
+    </ul>`,
+      cons: `<ul><li>In case of liquid-liquid system, heavier liquid having higher density are pushed towards the wall and get collected./li>
+      </ul>
     <p class='red'>*Capital Expenditure</p>`,
       link: "https://www.youtube.com/embed/FhS5vN4r5LA"
     },
     {
-      image: "assets/images/rotary_drum.png",
-      videoimge: "assets/images/rotary_drum_play.png",
-      text: "Rotary Drum (Screen)",
-      defn: `A rotary drum separates solids from the liquid with a good separation efficiency against low running and maintenance costs. The drum sieve allows the liquid to pass however solids are retained and carried out in a rotating movement.`,
-      pros: `<ul><li>Low CAPEX and operation cost</li>
-    <li>Less operational risk because equipment rotates at low speed</li>
-    <li>Equipment can be functional if precipitation (1st step) is controlled robustly (correct residence time, temperature, IPA concentration)
-</li>
-</ul>
-<div class='blue'>
-   <p><b>Technology supplier:</b> REKO</p>
-   <p><b>Additional/other suppliers:</b> COLUBRIS Cleantech (Redox Water Technology)</p>
-   </div>
-    `,
-      cons: `<ul><li>Minimal opening size is 200 microns </li>
-    <li>Depending on pectin fiber structure, risk of bleed off fine particles in filtrate IPA</li>
-    <li>If IPA in mother liquor is <44%, performance is reduced</li>
-    <li>Maintenance and poor mechanical stability (Bad experience in Malchin)</li></ul>`,
-      link: "https://www.youtube.com/embed/cVNEM-yZ_kU"
+      image: "assets/images/Card2.png",
+      text: "Decanter Centrifuge",
+      text1: "Working principle of decanter centrifuge",
+      pros: `<ul><li>Uses centrifugal forces that can be well beyond 3000 times greater than gravity.</li>
+    <li>DSolid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase forms a concentric inner layer.</li>
+    <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a different speed than the bowl.</li>
+    <li>As a result, the solids are gradually “ploughed” out and removed from the conical part.</li>
+    </ul>`,
     },
     {
-      image: "assets/images/Belt-thickener.png",
-      videoimge: "assets/images/belt-thickener_play.png",
-      text: "Belt Drain Separator",
-      defn: `A belt drain separator is an industrial machine, used for solid/liquid separation processes, particularly the dewatering of sludges in the chemical industry, mining and water treatment. `,
-      pros: `<ul><li>Cheaper in comparison with Decanter</li>
-    <li>Technology is mainly used for waste-water filtration like Turbo Drain from Bellmer</li>
-    <li>Belt Press from Bellmer (competitor)  is used in precipitation area which is not so wide but really long as the draining <span class='whitespace'>(separation) is by gravity</span>
-</li>
-   <li>Technology used in Redon (HM Line) in past, however was not ATEX and homemade constructors, therefore, not operational</li>
-   <li>Dry matter is higher (20-30 wt.%) compared to that in Redon
-</li>
-    </ul>`,
-      cons: `<ul>
-    <li>Reliability depends on mother liquor, pectin structure and flow distribution</li>
-    <li>As the filtration is by gravity or draining, the number of belts to be installed must be high, i.e. 5 or 6 considering the flow/area <span class='whitespace'>installed in Redon</span></li>
-    <li>In case of Bellmer, roller press (competitor) large filtration area is required</li>
-    <li>Difficult to get blanketed equipment</li>
-    </ul>`,
-      link: "https://www.youtube.com/embed/26zHzCQt8O8"
+      image: "assets/images/Card3.png",
+      text: "stack disk centrifuge",
+      text1: "Working principle of stack disk centrifuge",
     },
+  ]
+
+  button = [
+{
+  btn1: ` <div class="button1"> Scroll </div>
+    <div class="button2"> Bowl </div>
+    <div class="button3"> Solids <br>Discharge </div>`,
+    btn2:
+    `<div class="button4"> Feed </div>
+    <div class="button5"> Adjustable Impeller </div>
+    <div class="button6"> Materials</div>
+    <div class="button7"> Overflow</div>`,
+    title: ` <p> Screw </p> `,
+    description: `<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p> `,
+    },
+  ]
+
+  stackdisk = [
     {
-      image: "assets/images/vaccum_belt.png",
-      videoimge: "assets/images/vaccum_belt_play.png",
-      text: "Vaccum Belt Filter",
-      defn: `A vacuum belt filter is used for the filtration of liquids and dewatering of sludges. Vacuum is pulled to remove the liquid through a continuously moving filter cloth. There is also a possibility to have multiple wash steps along the length of the filter.`,
-      pros: `<ul>
-    <li>Good quality in filtrate</li>
-    <li>Dry matter of 10–13% is possible</li>
-    </ul>`,
-      cons: `<ul>
-    <li>High operation cost (N2, power)</li>
-    <li>High CAPEX and maintenance cost  in comparison with Decanters</li>
-    <li>High footprint</li>
-    </ul>`,
-      link: "https://www.youtube.com/embed/6voXE1HxYsY"
-    }
+      interctivity1: `<p>The product to be clarified enters the interior of the bowl through a stationary inlet pipe.</p>`,
+    },
+    {interctivity2: `<p>Gently accelerated by the distributor to the bowl speed.</p>`,},
+    {interctivity3: `<p>The disk stack in the bowl causes the product stream to be divided up into many thin layers, creating a large clarifying area. The solids are separated from the liquid within the disk stack.</p>`,},
+    {interctivity4: `<p>The high centrifugal force separates the solids and collected in the solids chamber of the bowl. </p>`,},
+    {interctivity5: `<p>A hydraulic system operates the sliding piston. </p>`,},
+    {interctivity6: `<p>Periodically ejects the separated solids at full speed of rotation via a solids cyclone (optional). </p>`,},
+    {interctivity7: `<p>The clarified liquid flows out of the disk pack to a centripetal pump which discharges the liquid under pressure. </p>`,},
+    {interctivity8: `<p>Outlet of the clarified liquid. </p>`,},
   ]
 
   updateVideoUrl(id: string) {
@@ -108,11 +98,11 @@ beyond 3000 times greater than gravity.`,
 
   tab(n) {
     this.selectedtab = n;
-    this.selectedItem = 1;
+    this.selectedItem = -1;
     this.showvideo = true;
-    this.para = true;
-    this.hidden = true;
-    this.shown = false
+    this.para = false;
+    this.hidden = false;
+    this.shown = true
   }
   close() {
     this.showvideo = false;
@@ -135,5 +125,15 @@ beyond 3000 times greater than gravity.`,
     this.hidden = true;
     this.para = true;
 
+  }
+
+  selectedTab;
+  gotoTab(i) {
+    this.selectedTab = this.items[i];
+  }
+
+  selectedInterctivity;
+  gotoItem(i) {
+    this.selectedInterctivity = this.stackdisk[i];
   }
 }

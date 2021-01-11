@@ -30,10 +30,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              /*"node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"*/
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -129,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "solid-separation-tech"
+  "defaultProject": "solid-separation-tech",
+  "cli": {
+    "analytics": false
+  }
 }
