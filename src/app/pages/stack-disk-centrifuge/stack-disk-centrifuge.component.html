@@ -1,0 +1,13 @@
+<div class="text_title">Stack Disk Centrifuge</div>
+<div class="back_img">
+  <div class="dummy" (click)="this.selectedIndex = -1"></div>
+  <div>
+    <div *ngFor="let item of stackdisk; let i = index" class="item"
+      [ngClass]="{'active' : this.selectedIndex == i, 'not-selected' : item.selected != true }">
+      <button class="btn" (click)="gotoItem(i)">+</button>
+      <div class="description" *ngIf="this.selectedIndex == i">
+        <div [innerHTML]="item.interctivity"></div>
+      </div>
+    </div>
+  </div>
+</div>

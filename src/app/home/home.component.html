@@ -92,59 +92,8 @@
       </div>
 
       <div>
-        <div class="panal overfl" *ngIf="this.items[selectedtab].text == 'stack disk centrifuge'">
-
-          <div class="text_title">{{this.items[selectedtab].text1}}</div>
-          <div class="back_img">
-            <div>
-              <button class="btn1" (click)="gotoItem(0)">+</button>
-              <div>
-                <div class="interctivity1" [innerHTML]="this.selectedInterctivity.interctivity1"></div>
-              </div>
-            </div>
-            <div>
-            <button class="btn2" (click)="gotoItem(1)">+</button>
-            <div>
-              <div class="interctivity2" [innerHTML]="this.selectedInterctivity.interctivity2"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn3" (click)="gotoItem(2)">+</button>
-            <div>
-              <div class="interctivity3" [innerHTML]="this.selectedInterctivity.interctivity3"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn4" (click)="gotoItem(3)">+</button>
-            <div>
-              <div class="interctivity4" [innerHTML]="this.selectedInterctivity.interctivity4"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn5" (click)="gotoItem(4)">+</button>
-            <div>
-              <div class="interctivity5" [innerHTML]="this.selectedInterctivity.interctivity5"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn6" (click)="gotoItem(5)">+</button>
-            <div>
-              <div class="interctivity6" [innerHTML]="this.selectedInterctivity.interctivity6"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn7" (click)="gotoItem(6)">+</button>
-            <div>
-              <div class="interctivity7" [innerHTML]="this.selectedInterctivity.interctivity7"></div>
-            </div>
-          </div>
-          <div>
-            <button class="btn8" (click)="gotoItem(7)">+</button>
-            <div>
-              <div class="interctivity8" [innerHTML]="this.selectedInterctivity.interctivity8"></div>
-            </div>
-          </div>
-          </div>
+        <div class="panal overfl" *ngIf="selectedtab  == 2">
+          <app-stack-disk-centrifuge></app-stack-disk-centrifuge>
         </div>
       </div>
 

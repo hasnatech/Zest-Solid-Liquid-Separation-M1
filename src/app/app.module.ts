@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SafePipe } from './pipes/safe.pipe';
 import { Home1Component } from './home1/home1.component';
+import { StackDiskCentrifugeComponent } from './pages/stack-disk-centrifuge/stack-disk-centrifuge.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,9 @@ import { Home1Component } from './home1/home1.component';
     
     SafePipe,
     
-    Home1Component
+    Home1Component,
+    
+    StackDiskCentrifugeComponent
   ],
   imports: [
     BrowserModule,
