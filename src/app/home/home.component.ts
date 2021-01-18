@@ -26,6 +26,13 @@ export class HomeComponent implements OnInit {
   disabled = false;
   para = true;
   playVideo = false;
+  selecteddesc = 0;
+  selectedprocess = false
+  selectedprocess1 = false
+  image1 = false
+  image2 = false
+  image3 = false;
+  buttonchange =false;
   constructor(protected sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
@@ -77,8 +84,63 @@ export class HomeComponent implements OnInit {
       description: `<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p> `,
     },
   ]
+ 
+decanterdata =[
+    { 
+    title : `Bowl`,
+    desc: ` The bowl has a cylindrical/ conical shape and rotates at a pre - set
+speed optimally adjusted to the application.The slurry rotates
+with the bowl at the operating speed and forms a concentric
+layer at the bowl wall.The solids contained in the product are
+packed against the bowl wall by centrifugal force.The length of
+the cylindrical bowl section and the cone angle are selected to
+meet the speciﬁc requirements of an application.`
+  },
+  {
+    title: `Scroll`,
+    desc: `The scroll rotates at a slightly different speed than the bowl and
+conveys the separated solids toward the conical end of the bowl.
+This differential speed determines the residence time of the solids in the bowl. Residence time is a critical factor for cake dryness. It can be adjusted by changing the differential speed ofthe
+scroll thus providing optimal separation. The scroll design depends on the application and the separation task.
 
-
+`
+  },
+  {
+    title: `Solids Discharge`,
+    desc: `Settled solids are ejected through ports at
+the conical end of the bowl into the solids
+housing and fall through the discharge
+chute.`
+  },
+  {
+    title: `Feed`,
+    desc: `The product is fed through a stationary pipe into the
+feed zone located in the center of the scroll. The product is then accelerated circumferentially and delivered through distribution ports into the bowl.`
+  },
+  {
+    title: `Adjustable Impeller`,
+    desc: `The clarified liquid can also be decanted with an impeller and discharged from the bowl under pressure.
+This eliminates the need for a separate chamber
+pump. The Flottweg Adjustable Impeller is an engineering refinement that permits quick and precise
+adjustment of the pond depth during operation to
+accommodate for changing process conditions.`
+  },
+  {
+    title: `Materials`,
+    desc: `Flottweg uses high-quality stainless steel for all
+product-wetted areas. The bowl and scroll body are
+made of high-strength centrifugal Duplex stainless
+steel casting.`
+  },
+  {
+    title: `Overflow Weirs`,
+    desc: `The clarified liquids flow to the cylindrical end of the
+bowl where they exit over weir plates. Easily adjustable
+weir plates allow for precise adjustment of the pond
+depth in the bowl. The liquid overflow is then collected in a centrate chamber and discharged by gravity.`
+  }
+  
+]
 
   updateVideoUrl(id: string) {
     const url = 'https://www.youtube.com/embed/' + id;
@@ -120,6 +182,12 @@ export class HomeComponent implements OnInit {
   gotoTab(i) {
     this.selectedTab = this.items[i];
   }
+ 
+title(n){
+  this.selecteddesc = n;
+  
 
+ 
+}
 
 }
