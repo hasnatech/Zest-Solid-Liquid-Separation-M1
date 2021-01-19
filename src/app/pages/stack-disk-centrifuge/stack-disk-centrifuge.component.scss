@@ -7,7 +7,8 @@
   height: 475px;
   max-width: 100%;
   margin: 0 auto;
- color: #fff;
+  color: #fff;
+
   .dummy {
     background-color: transparent;
     position: absolute;
@@ -32,6 +33,9 @@
     transition: border 0.5s ease;
     z-index: 2;
     outline: 0;
+    position: absolute;
+    left: 0;
+    transform: scale(0.8);
 
     &:hover {
       border: 2px solid #fff;
@@ -49,7 +53,7 @@
     border: 3px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     left: -2px;
-    top: -3px;
+    top: -2px;
     width: 25px;
     height: 25px;
     pointer-events: none;
@@ -83,38 +87,38 @@
 
   &:nth-child(2) {
     left: 315px;
-    top: 105px;
+    top: 165px;
   }
 
   &:nth-child(3) {
     left: 287px;
-    top: 104px;
+    top: 164px;
   }
 
   &:nth-child(4) {
     left: 267px;
-    top: 114px;
+    top: 174px;
   }
 
   &:nth-child(5) {
     left: 354px;
-    top: 103px;
+    top: 200px;
   }
 
 
   &:nth-child(6) {
     left: 400px;
-    top: 80px;
+    top: 140px;
   }
 
   &:nth-child(7) {
     left: 285px;
-    top: -52px;
+    top: 110px;
   }
 
   &:nth-child(8) {
     left: 375px;
-    top: -101px;
+    top: 60px;
   }
 
   .description {
@@ -152,6 +156,7 @@
 
   }
 }
-.text_title{
+
+.text_title {
   color: #fff;
 }
