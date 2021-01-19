@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import {
   Component,
   OnInit,
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit {
   image2 = false
   image3 = false;
   buttonchange = false;
+  header = true;
   constructor(protected sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
@@ -93,7 +95,8 @@ with the bowl at the operating speed and forms a concentric
 layer at the bowl wall.The solids contained in the product are
 packed against the bowl wall by centrifugal force.The length of
 the cylindrical bowl section and the cone angle are selected to
-meet the speciﬁc requirements of an application.`
+meet the speciﬁc requirements of an application.`,
+      selected: false
     },
     {
       title: `Scroll`,
@@ -102,41 +105,47 @@ conveys the separated solids toward the conical end of the bowl.
 This differential speed determines the residence time of the solids in the bowl. Residence time is a critical factor for cake dryness. It can be adjusted by changing the differential speed ofthe
 scroll thus providing optimal separation. The scroll design depends on the application and the separation task.
 
-`
+`,
+      selected: false
     },
     {
       title: `Solids Discharge`,
       desc: `Settled solids are ejected through ports at
 the conical end of the bowl into the solids
 housing and fall through the discharge
-chute.`
+chute.`,
+selected: false
     },
     {
       title: `Feed`,
       desc: `The product is fed through a stationary pipe into the
-feed zone located in the center of the scroll. The product is then accelerated circumferentially and delivered through distribution ports into the bowl.`
-    },
+feed zone located in the center of the scroll. The product is then accelerated circumferentially and delivered through distribution ports into the bowl.`,
+selected: false    
+},
     {
       title: `Adjustable Impeller`,
       desc: `The clarified liquid can also be decanted with an impeller and discharged from the bowl under pressure.
 This eliminates the need for a separate chamber
 pump. The Flottweg Adjustable Impeller is an engineering refinement that permits quick and precise
 adjustment of the pond depth during operation to
-accommodate for changing process conditions.`
+accommodate for changing process conditions.`,
+      selected: false
     },
     {
       title: `Materials`,
       desc: `Flottweg uses high-quality stainless steel for all
 product-wetted areas. The bowl and scroll body are
 made of high-strength centrifugal Duplex stainless
-steel casting.`
+steel casting.`,
+      selected: false
     },
     {
       title: `Overflow Weirs`,
       desc: `The clarified liquids flow to the cylindrical end of the
 bowl where they exit over weir plates. Easily adjustable
 weir plates allow for precise adjustment of the pond
-depth in the bowl. The liquid overflow is then collected in a centrate chamber and discharged by gravity.`
+depth in the bowl. The liquid overflow is then collected in a centrate chamber and discharged by gravity.`,
+      selected: false
     }
 
   ]
@@ -153,11 +162,13 @@ depth in the bowl. The liquid overflow is then collected in a centrate chamber a
     this.para = false;
     this.hidden = false;
     this.shown = true
+    this.header = false
   }
   close() {
     this.showvideo = false;
     //this.hidden = false;
     this.playVideo = false;
+      this.header = true
   }
   hide() {
     this.selectedItem = -1;
@@ -183,6 +194,7 @@ depth in the bowl. The liquid overflow is then collected in a centrate chamber a
   }
 
   title(n) {
+    this.decanterdata[n].selected = true;
     this.selecteddesc = n;
 
 

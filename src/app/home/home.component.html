@@ -4,7 +4,7 @@
 
       <div class="para">
         <div class="panal_text">
-          <div class="header_br">Solid-Liquid Separation</div>
+          <div class="header_br" *ngIf="header">Solid-Liquid Separation</div>
         </div>
       </div>
 
@@ -19,6 +19,16 @@
 </div>
 
 <div class="fullpage" *ngIf="showvideo">
+  <div class="flexheader">
+    <div class="dummy"></div>
+   <div class="text" [innerHtml]="this.items[selectedtab].text"> </div>
+   
+      <div class="image" (click)="close()" style="cursor: pointer;">
+    <img src="assets/images/home.png">
+    <hr>
+    </div>
+   
+  </div>
   <div class="videoclass">
     <div class="content" [ngClass]="{'open': this.shown == true}">
       <div class="fullheight flex flex-row" *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
@@ -70,25 +80,29 @@
 
             <div *ngFor="let data of this.decanterdata; let i = index" class="imagetext"
               [ngClass]="{'changecolor': this.selecteddesc == i}">
+                         
               <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
+              <div class="item"
+                [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
               <button class="decbtn" (click)="title(i)">+</button>
-              <div *ngIf="selecteddesc == i" class="desc">
-                <div [innerHtml]="data.title" class="desctitle sidetitle"></div>
-                <div [innerHtml]="data.desc" class="desccontent"></div>
               </div>
+             
 
             </div>
           </div>
 
         </div>
-
+        
+             <div class="desc">
+               <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
+               <div class="desccontent"  [innerHtml]="decanterdata[selecteddesc].desc"></div>
+             </div>
         <div class="optimize">
-
           <div class="decpanel">
             <div class="subtitle sidetitle">Decanter optimisation</div>
 
             <div class="image">
-              <img src="assets/images/opt.png">
+              <img src="assets/images/Card2.png">
             </div>
           </div>
 
@@ -215,9 +229,9 @@
         </div>
       </div>
 
-      <div class="close_btn button" (click)="close()">
+      <!--<div class="close_btn button" (click)="close()">
         X
-      </div>
+      </div>-->
     </div>
   </div>
 </div>

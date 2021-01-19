@@ -9,17 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SafePipe } from './pipes/safe.pipe';
-import { Home1Component } from './home1/home1.component';
+
 import { StackDiskCentrifugeComponent } from './pages/stack-disk-centrifuge/stack-disk-centrifuge.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    
     SafePipe,
-    
-    Home1Component,
-    
     StackDiskCentrifugeComponent
   ],
   imports: [
