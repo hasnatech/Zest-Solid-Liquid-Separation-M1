@@ -1,6 +1,30 @@
+
+.stackdisc::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #b3cfdb;
+  //   margin: 10px;
+  // margin: 10px;
+}
+
+.stackdisc::-webkit-scrollbar {
+  width: 10px;
+  background-color: #679fb6;
+  border-radius: 20px;
+
+
+}
+
+.stackdisc::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgb(255, 255, 255);
+
+
+}
 .stackdisc{
   padding: 20px;
-  height: 100%;
+  height: 91%;
   overflow-y: auto;
 }
 
