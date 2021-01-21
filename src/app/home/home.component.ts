@@ -114,14 +114,14 @@ scroll thus providing optimal separation. The scroll design depends on the appli
 the conical end of the bowl into the solids
 housing and fall through the discharge
 chute.`,
-selected: false
+      selected: false
     },
     {
       title: `Feed`,
       desc: `The product is fed through a stationary pipe into the
 feed zone located in the center of the scroll. The product is then accelerated circumferentially and delivered through distribution ports into the bowl.`,
-selected: false    
-},
+      selected: false
+    },
     {
       title: `Adjustable Impeller`,
       desc: `The clarified liquid can also be decanted with an impeller and discharged from the bowl under pressure.
@@ -168,7 +168,7 @@ depth in the bowl. The liquid overflow is then collected in a centrate chamber a
     this.showvideo = false;
     //this.hidden = false;
     this.playVideo = false;
-      this.header = true
+    this.header = true
   }
   hide() {
     this.selectedItem = -1;

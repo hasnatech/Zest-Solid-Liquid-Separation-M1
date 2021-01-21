@@ -8,18 +8,18 @@
         </div>
       </div>
       <div class="subtexts">
-  <p>Welcome to the course on Centrifugal Separation: Basics and Working Principle.</p>
-  <p>By the end of this course, you will be able to understand:</p>
-  <ul>
-    <li>The basics of centrifugal separation</li>
-    <li>Working principle of decanter and stack disc centrifuge</li>
-    <li>Decanter optimization</li>
-  </ul>
-  <br>
-  <p class="text-center"><i>Click each topic to learn more.</i></p>
-  </div>
+        <p>Welcome to the course on Centrifugal Separation: Basics and Working Principle.</p>
+        <p>By the end of this course, you will be able to understand:</p>
+        <ul>
+          <li>The basics of centrifugal separation</li>
+          <li>Working principle of decanter and stack disc centrifuge</li>
+          <li>Decanter optimization</li>
+        </ul>
+        <br>
+        <p class="text-center"><i>Click each topic to learn more.</i></p>
+      </div>
       <div class="grid_container">
-        
+
         <div class="grid" *ngFor="let data of this.items;let i=index" (click)="tab(i)"
           [style.background-image]="'url('+data.image+')'">
           <div class="text" [innerHtml]="data.text"></div>
@@ -32,13 +32,13 @@
 <div class="fullpage" *ngIf="showvideo">
   <div class="flexheader">
     <div class="dummy"></div>
-   <div class="text" [innerHtml]="this.items[selectedtab].text"> </div>
-   
-      <div class="image" (click)="close()" style="cursor: pointer;">
-    <img src="assets/images/home.png">
-    <hr>
+    <div class="text" [innerHtml]="this.items[selectedtab].text"> </div>
+
+    <div class="image" (click)="close()" style="cursor: pointer;">
+      <img src="assets/images/home.png">
+      <hr>
     </div>
-   
+
   </div>
   <div class="videoclass">
     <div class="content" [ngClass]="{'open': this.shown == true}">
@@ -54,7 +54,7 @@
             allowfullscreen>
           </iframe>
         </div>
-        <div class="framedata">
+        <!-- <div class="framedata">
           <div class="alignflex">
             <div class="title">{{this.items[selectedtab].text1}}
               <div *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
@@ -73,15 +73,15 @@
           </div>
           <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
           <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon>
-        </div>
+        </div> -->
       </div>
 
 
 
-<div *ngIf="selectedtab  == 1">
-  <app-decanter></app-decanter>
+      <div *ngIf="selectedtab  == 1">
+        <app-decanter></app-decanter>
 
-</div>
+      </div>
 
       <div>
         <div class="model" [style.backgroundColor]='selectedTab.color' *ngIf="selectedTab != undefined">

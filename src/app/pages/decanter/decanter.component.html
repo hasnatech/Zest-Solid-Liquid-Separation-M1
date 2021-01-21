@@ -1,22 +1,23 @@
       <div class="panel decanter">
-        
-          <div class="text_title sidetitle">Working principle of decanter centrifuge</div>
-          <div class="pros_text">
-            <ul>
-              <li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than
-                gravity</li>
-              <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase
-                forms a concentric inner layer</li>
-              <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a
-                different speed than the bowl</li>
-              <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
-            </ul>
-          </div>
 
-          <div class="text-center">
+        <div class="text_title sidetitle">Working principle of decanter centrifuge</div>
+        <div class="pros_text">
+          <ul>
+            <li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than
+              gravity</li>
+            <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase
+              forms a concentric inner layer</li>
+            <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a
+              different speed than the bowl</li>
+            <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
+          </ul>
+        </div>
+
+        <div class="text-center">
           <p><b><i>Click to view the working principle of the Decanter Centrifuge:</i></b></p>
-          <a href="https://www.youtube.com/watch?v=FhS5vN4r5LA" target="blank">https://www.youtube.com/watch?v=FhS5vN4r5LA</a>
-          </div>
+          <a href="https://www.youtube.com/watch?v=FhS5vN4r5LA"
+            target="blank">https://www.youtube.com/watch?v=FhS5vN4r5LA</a>
+        </div>
         <h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>
         <div class="imagecontent">
 
@@ -29,7 +30,7 @@
               <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
               <div class="item"
                 [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
-                <button class="decbtn" (click)="title(i)">{{i + 1}}</button>
+                <button class="decbtn" (click)="title(i)">+</button>
               </div>
 
 
@@ -50,28 +51,28 @@
               <img src="assets/images/Card2.png">
             </div>
 
-                <div class="table toptable">
-                  <table>
-                    <tr>
-                      <th>Process Parameters</th>
-                      <th>Decanter Parameters</th>
-                    </tr>
-                    <tr>
-                      <td>Feed rate (Q)</td>
-                      <td>Differential speed (Δn)</td>
-                    </tr>
-                    <tr>
-                      <td>Particle size</td>
-                      <td>Pond depth (R<sub>b</sub>-r)</td>
-                    </tr>
-                    <tr>
-                      <td>Viscosity (heating)</td>
-                      <td>Bowl speed (g-force)</td>
-                    </tr>
-        
+            <!-- <div class="table toptable">
+              <table>
+                <tr>
+                  <th>Process Parameters</th>
+                  <th>Decanter Parameters</th>
+                </tr>
+                <tr>
+                  <td>Feed rate (Q)</td>
+                  <td>Differential speed (Δn)</td>
+                </tr>
+                <tr>
+                  <td>Particle size</td>
+                  <td>Pond depth (R<sub>b</sub>-r)</td>
+                </tr>
+                <tr>
+                  <td>Viscosity (heating)</td>
+                  <td>Bowl speed (g-force)</td>
+                </tr>
 
-                  </table>
-                </div>
+
+              </table>
+            </div> -->
           </div>
 
           <div class="process">
@@ -81,20 +82,29 @@
               parameters</div>
             <div *ngIf="selectedprocess">
               <div class="flexcenter">
-                  <p class="subtitle">Terminal settling velocity of the particle under the centrifugal force</p>
-                  <div class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;=</div>
-              <div class="image">
-                <img src="assets/images/eqn.png">
-              </div>
+                <p class="subtitle">Terminal settling velocity of the particle under the centrifugal force</p>
+                <div class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;=</div>
+                <div class="image">
+                  <img src="assets/images/eqn.png">
+                </div>
               </div>
               <div class="eqndefn">
-                <P>V<sub>t</sub> = Terminal settling velocity of the particle</P>
-                <p>d = Diameter of the particle</p>
-                <p>ρ<sub>p</sub> = Density of the particle</p>
-                <p>ρ<sub>L</sub> = Density of the fluid</p>
-                <p>µ = Viscosity of the fluid</p>
-                <p>r = Radius of the particle</p>
-                <p>ω = Angular velocity</p>
+                <div class="flex">
+                  <div class="flex-1">
+                    <P>V<sub>t</sub> = Terminal settling velocity of the particle</P>
+                    <p>d = Diameter of the particle</p>
+                    <p>ρ<sub>p</sub> = Density of the particle</p>
+                    <p>ρ<sub>L</sub> = Density of the fluid</p>
+                  </div>
+
+                  <div class="flex-1">
+                    <p>µ = Viscosity of the fluid</p>
+                    <p>r = Radius of the particle</p>
+                    <p>ω = Angular velocity</p>
+                  </div>
+
+                </div>
+
               </div>
 
 
