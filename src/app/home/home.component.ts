@@ -58,10 +58,10 @@ export class HomeComponent implements OnInit {
     image: "assets/images/Card2.png",
     text: "Decanter Centrifuge",
     text1: "Working principle of decanter centrifuge",
-    pros: `<ul><li>Uses centrifugal forces that can be well beyond 3000 times greater than gravity.</li>
-    <li>DSolid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase forms a concentric inner layer.</li>
-    <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a different speed than the bowl.</li>
-    <li>As a result, the solids are gradually “ploughed” out and removed from the conical part.</li>
+    pros: `<ul><li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than gravity</li>
+    <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase forms a concentric inner layer</li>
+    <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a different speed than the bowl</li>
+    <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
     </ul>`,
   },
   {
@@ -114,14 +114,14 @@ scroll thus providing optimal separation. The scroll design depends on the appli
 the conical end of the bowl into the solids
 housing and fall through the discharge
 chute.`,
-selected: false
+      selected: false
     },
     {
       title: `Feed`,
       desc: `The product is fed through a stationary pipe into the
 feed zone located in the center of the scroll. The product is then accelerated circumferentially and delivered through distribution ports into the bowl.`,
-selected: false    
-},
+      selected: false
+    },
     {
       title: `Adjustable Impeller`,
       desc: `The clarified liquid can also be decanted with an impeller and discharged from the bowl under pressure.
@@ -168,7 +168,7 @@ depth in the bowl. The liquid overflow is then collected in a centrate chamber a
     this.showvideo = false;
     //this.hidden = false;
     this.playVideo = false;
-      this.header = true
+    this.header = true
   }
   hide() {
     this.selectedItem = -1;

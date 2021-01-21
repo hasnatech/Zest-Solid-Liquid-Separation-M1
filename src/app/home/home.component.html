@@ -1,14 +1,25 @@
 <div class="header">
-  <div class="container">
+  <div class="container" *ngIf="header">
     <div class="mainpage">
 
       <div class="para">
         <div class="panal_text">
-          <div class="header_br" *ngIf="header">Solid-Liquid Separation</div>
+          <div class="header_br">Centrifugal Separation: Basics and Working Principle</div>
         </div>
       </div>
-
+      <div class="subtexts">
+        <p>Welcome to the course on Centrifugal Separation: Basics and Working Principle.</p>
+        <p>By the end of this course, you will be able to understand:</p>
+        <ul>
+          <li>The basics of centrifugal separation</li>
+          <li>Working principle of decanter and stack disc centrifuge</li>
+          <li>Decanter optimization</li>
+        </ul>
+        <br>
+        <p class="text-center"><i>Click each topic to learn more.</i></p>
+      </div>
       <div class="grid_container">
+
         <div class="grid" *ngFor="let data of this.items;let i=index" (click)="tab(i)"
           [style.background-image]="'url('+data.image+')'">
           <div class="text" [innerHtml]="data.text"></div>
@@ -21,13 +32,13 @@
 <div class="fullpage" *ngIf="showvideo">
   <div class="flexheader">
     <div class="dummy"></div>
-   <div class="text" [innerHtml]="this.items[selectedtab].text"> </div>
-   
-      <div class="image" (click)="close()" style="cursor: pointer;">
-    <img src="assets/images/home.png">
-    <hr>
+    <div class="text" [innerHtml]="this.items[selectedtab].text"> </div>
+
+    <div class="image" (click)="close()" style="cursor: pointer;">
+      <img src="assets/images/home.png">
+      <hr>
     </div>
-   
+
   </div>
   <div class="videoclass">
     <div class="content" [ngClass]="{'open': this.shown == true}">
@@ -43,7 +54,7 @@
             allowfullscreen>
           </iframe>
         </div>
-        <div class="framedata">
+        <!-- <div class="framedata">
           <div class="alignflex">
             <div class="title">{{this.items[selectedtab].text1}}
               <div *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
@@ -62,156 +73,15 @@
           </div>
           <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
           <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon>
-        </div>
+        </div> -->
       </div>
 
 
 
-
-
-      <div class="panal decanter" *ngIf="this.items[selectedtab].text == 'Decanter Centrifuge'">
-        <div class="text_title sidetitle">{{this.items[selectedtab].text1}}</div>
-        <div class="pros_text" [innerHtml]="this.items[selectedtab].pros">{{this.items[selectedtab].pros}}</div>
-        <h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>
-        <div class="imagecontent">
-
-
-          <div class="imagetextcontent">
-
-            <div *ngFor="let data of this.decanterdata; let i = index" class="imagetext"
-              [ngClass]="{'changecolor': this.selecteddesc == i}">
-                         
-              <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
-              <div class="item"
-                [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
-              <button class="decbtn" (click)="title(i)">+</button>
-              </div>
-             
-
-            </div>
-          </div>
-
-        </div>
-        
-             <div class="desc">
-               <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
-               <div class="desccontent"  [innerHtml]="decanterdata[selecteddesc].desc"></div>
-             </div>
-        <div class="optimize">
-          <div class="decpanel">
-            <div class="subtitle sidetitle">Decanter optimisation</div>
-
-            <div class="image">
-              <img src="assets/images/Card2.png">
-            </div>
-          </div>
-
-          <div class="process">
-            <div class="subtitle buttontext sidetitle" (click)="selectedprocess = this.selectedprocess ? false : true">
-              Process
-              parameters</div>
-            <div *ngIf="selectedprocess">
-
-              <div class="image">
-                <img src="assets/images/eqn.png">
-              </div>
-
-              <div class="flexbetween">
-                <div class="samebg content1" [ngClass]="{'showimage': image1 == true}">
-                  <div class="graphtitle" (click)="this.image1 = true">Feed Rate</div>
-                  <img src="assets/images/graph-01.png">
-                </div>
-                <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
-                  <div class="graphtitle" (click)="this.image2 = true">Particle Size</div>
-                  <img src="assets/images/graph-01.png">
-                </div>
-                <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
-                  <div class="graphtitle" (click)="this.image3 = true">Viscosity</div>
-                  <img src="assets/images/graph-01.png">
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="process">
-            <div class="subtitle buttontext sidetitle"
-              (click)="selectedprocess1 = this.selectedprocess1 ? false : true">Decanter parameters</div>
-            <div *ngIf="selectedprocess1">
-
-              <div class="tabletext">
-
-                <div class="text">
-                  <p>Differential speed (Δn) → Difference between the bowl and screw speed.</p>
-                </div>
-                <div class="table">
-                  <table>
-                    <tr>
-                      <th>Too high</th>
-                      <th>Too low</th>
-                    </tr>
-                    <tr>
-                      <td>Clean filtrate</td>
-                      <td>Dirty filtrate</td>
-                    </tr>
-                    <tr>
-                      <td>Wet cake</td>
-                      <td>Dry cake</td>
-                    </tr>
-                    <tr>
-                      <td>The volume of the decanter is not fully utilised</td>
-                      <td>Screw – high torque</td>
-                    </tr>
-                    <tr>
-                      <td>Screw – low torque</td>
-                      <td></td>
-                    </tr>
-
-                  </table>
-                </div>
-              </div>
-
-
-              <div class="tabletext tabletextlast">
-
-                <div class="text">
-                  <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
-                  <img src="assets/images/graph-04.png">
-                </div>
-                <div class="table">
-                  <table>
-                    <tr>
-                      <th>Deep</th>
-                      <th>Shallow</th>
-                    </tr>
-                    <tr>
-                      <td>Allows more room for liquid clarification.</td>
-                      <td>Dirty filtrate</td>
-                    </tr>
-                    <tr>
-                      <td>Clean filtrate</td>
-                      <td>Dry cake</td>
-                    </tr>
-                    <tr>
-                      <td>The volume of the decanter is not fully utilisedWet cake</td>
-                      <td></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
+      <div *ngIf="selectedtab  == 1">
+        <app-decanter></app-decanter>
 
       </div>
-
-
-
-
-
-
-
 
       <div>
         <div class="model" [style.backgroundColor]='selectedTab.color' *ngIf="selectedTab != undefined">
@@ -224,7 +94,7 @@
 
       <div class="container">
         <div class="panal overfl" *ngIf="selectedtab  == 2">
-          <div class="sidetitle widthtext">Working principle of stack disk centrifuge</div>
+          <!--<div class="sidetitle widthtext">Working principle of stack disk centrifuge</div>-->
           <app-stack-disk-centrifuge></app-stack-disk-centrifuge>
         </div>
       </div>
