@@ -1,3 +1,9 @@
+.stackdisc{
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
 .back_img {
   position: relative;
   background-image: url('../../../assets/images/img.png');
@@ -87,17 +93,17 @@
 
   &:nth-child(2) {
     left: 315px;
-    top: 165px;
+    top: 140px;
   }
 
   &:nth-child(3) {
     left: 287px;
-    top: 164px;
+    top: 150px;
   }
 
   &:nth-child(4) {
     left: 267px;
-    top: 174px;
+    top: 165px;
   }
 
   &:nth-child(5) {
@@ -107,13 +113,13 @@
 
 
   &:nth-child(6) {
-    left: 400px;
-    top: 140px;
+    left: 420px;
+    top: 190px;
   }
 
   &:nth-child(7) {
     left: 285px;
-    top: 110px;
+    top: 93px;
   }
 
   &:nth-child(8) {
@@ -159,4 +165,18 @@
 
 .text_title {
   color: #fff;
+}
+
+.bottomtext{
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  color: #ffffff;
+  ol{
+        margin-block-start: 0em;
+        margin-block-end: 1em;
+ li{
+   padding-bottom: 5px;
+ }
+  }
 }

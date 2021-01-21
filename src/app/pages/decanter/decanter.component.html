@@ -1,0 +1,192 @@
+      <div class="panel decanter">
+        
+          <div class="text_title sidetitle">Working principle of decanter centrifuge</div>
+          <div class="pros_text">
+            <ul>
+              <li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than
+                gravity</li>
+              <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase
+                forms a concentric inner layer</li>
+              <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a
+                different speed than the bowl</li>
+              <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+          <p><b><i>Click to view the working principle of the Decanter Centrifuge:</i></b></p>
+          <a href="https://www.youtube.com/watch?v=FhS5vN4r5LA">https://www.youtube.com/watch?v=FhS5vN4r5LA</a>
+          </div>
+        <h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>
+        <div class="imagecontent">
+
+
+          <div class="imagetextcontent">
+
+            <div *ngFor="let data of this.decanterdata; let i = index" class="imagetext"
+              [ngClass]="{'changecolor': this.selecteddesc == i}">
+
+              <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
+              <div class="item"
+                [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
+                <button class="decbtn" (click)="title(i)">{{i + 1}}</button>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="desc">
+          <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
+          <div class="desccontent" [innerHtml]="decanterdata[selecteddesc].desc"></div>
+        </div>
+        <div class="optimize">
+          <div class="decpanel">
+            <div class="subtitle sidetitle">Decanter optimisation</div>
+
+            <div class="image">
+              <img src="assets/images/Card2.png">
+            </div>
+
+                <div class="table toptable">
+                  <table>
+                    <tr>
+                      <th>Process Parameters</th>
+                      <th>Decanter Parameters</th>
+                    </tr>
+                    <tr>
+                      <td>Feed rate (Q)</td>
+                      <td>Differential speed (Δn)</td>
+                    </tr>
+                    <tr>
+                      <td>Particle size</td>
+                      <td>Pond depth (R<sub>b</sub>-r)</td>
+                    </tr>
+                    <tr>
+                      <td>Viscosity (heating)</td>
+                      <td>Bowl speed (g-force)</td>
+                    </tr>
+        
+
+                  </table>
+                </div>
+          </div>
+
+          <div class="process">
+            <p><i>Click to explore each of these in detail.</i></p>
+            <div class="subtitle buttontext sidetitle" (click)="selectedprocess = this.selectedprocess ? false : true">
+              Process
+              parameters</div>
+            <div *ngIf="selectedprocess">
+              <div class="flexcenter">
+                  <p class="subtitle">Terminal settling velocity of the particle under the centrifugal force</p>
+                  <div class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;=</div>
+              <div class="image">
+                <img src="assets/images/eqn.png">
+              </div>
+              </div>
+              <div class="eqndefn">
+                <P>V<sub>t</sub> = Terminal settling velocity of the particle</P>
+                <p>d = Diameter of the particle</p>
+                <p>ρ<sub>p</sub> = Density of the particle</p>
+                <p>ρ<sub>L</sub> = Density of the fluid</p>
+                <p>µ = Viscosity of the fluid</p>
+                <p>r = Radius of the particle</p>
+                <p>ω = Angular velocity</p>
+              </div>
+
+
+              <div class="flexbetween">
+                <div class="samebg content1" [ngClass]="{'showimage': image1 == true}">
+                  <div class="graphtitle" (click)="this.image1 = true">Feed Rate</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency decreases as the feed rate increases.</p>
+                </div>
+                <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
+                  <div class="graphtitle" (click)="this.image2 = true">Particle Size</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency increases as the particle size increases.</p>
+                </div>
+                <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
+                  <div class="graphtitle" (click)="this.image3 = true">Viscosity</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency decreases as the viscosity increases.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="process">
+            <div class="subtitle buttontext sidetitle"
+              (click)="selectedprocess1 = this.selectedprocess1 ? false : true">Decanter parameters</div>
+            <div *ngIf="selectedprocess1">
+
+              <div class="tabletext">
+
+                <div class="text">
+                  <p>Differential speed (Δn) → Difference between the bowl and screw speed.</p>
+                </div>
+                <div class="table">
+                  <table>
+                    <tr>
+                      <th>Too high</th>
+                      <th>Too low</th>
+                    </tr>
+                    <tr>
+                      <td>Clean filtrate</td>
+                      <td>Dirty filtrate</td>
+                    </tr>
+                    <tr>
+                      <td>Wet cake</td>
+                      <td>Dry cake</td>
+                    </tr>
+                    <tr>
+                      <td>The volume of the decanter is not fully utilised</td>
+                      <td>Screw – high torque</td>
+                    </tr>
+                    <tr>
+                      <td>Screw – low torque</td>
+                      <td></td>
+                    </tr>
+
+                  </table>
+                </div>
+              </div>
+
+
+              <div class="tabletext tabletextlast">
+
+                <div class="text">
+                  <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
+                  <img src="assets/images/graph-04.png">
+                </div>
+                <div class="table">
+                  <table>
+                    <tr>
+                      <th>Deep</th>
+                      <th>Shallow</th>
+                    </tr>
+                    <tr>
+                      <td>More room for liquid clarification</td>
+                      <td>Dirty filtrate</td>
+                    </tr>
+                    <tr>
+                      <td>Clean filtrate</td>
+                      <td>Dry cake</td>
+                    </tr>
+                    <tr>
+                      <td>Wet cake</td>
+                      <td></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>

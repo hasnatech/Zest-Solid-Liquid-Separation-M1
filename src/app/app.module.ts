@@ -11,12 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from './pipes/safe.pipe';
 
 import { StackDiskCentrifugeComponent } from './pages/stack-disk-centrifuge/stack-disk-centrifuge.component';
+import { DecanterComponent } from './pages/decanter/decanter.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SafePipe,
-    StackDiskCentrifugeComponent
+    StackDiskCentrifugeComponent,
+    DecanterComponent
   ],
   imports: [
     BrowserModule,

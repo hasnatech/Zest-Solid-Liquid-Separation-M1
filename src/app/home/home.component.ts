@@ -58,10 +58,10 @@ export class HomeComponent implements OnInit {
     image: "assets/images/Card2.png",
     text: "Decanter Centrifuge",
     text1: "Working principle of decanter centrifuge",
-    pros: `<ul><li>Uses centrifugal forces that can be well beyond 3000 times greater than gravity.</li>
-    <li>DSolid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase forms a concentric inner layer.</li>
-    <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a different speed than the bowl.</li>
-    <li>As a result, the solids are gradually “ploughed” out and removed from the conical part.</li>
+    pros: `<ul><li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than gravity</li>
+    <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase forms a concentric inner layer</li>
+    <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a different speed than the bowl</li>
+    <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
     </ul>`,
   },
   {
