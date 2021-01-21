@@ -1,5 +1,5 @@
 {
-  "name": "solid-separation-tech",
+  "name": "solid-separation-m1",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "upload": "ng build --prod --base-href ./",
-    "predeploy": "ng build --prod --base-href https://hasnatech.github.io/video_solid/",
+    "predeploy": "ng build --prod --base-href https://hasnatech.github.io/Zest-Solid-Liquid-Separation-M1/",
     "deploy": "gh-pages -d dist/solid-separation-tech"
   },
   "private": true,
