@@ -81,14 +81,7 @@ export class DecanterComponent implements OnInit {
     this.decanterdata[n].selected = true;
     this.selecteddesc = n;
   }
-  /*scrollTo(target: HTMLElement) {
-    const parentOffset = 0;
-    const y = target.offsetTop - 0 - parentOffset;
-    window.scrollBy(0, y);
-  }*/
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-  }
+  
   process(){
      this.selectedprocess = true
      this.selectedprocess1 = false
@@ -97,5 +90,8 @@ export class DecanterComponent implements OnInit {
     this.selectedprocess1 = true;
     this.selectedprocess = false
 
+  }
+  scroll() {
+    document.querySelector('#target').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

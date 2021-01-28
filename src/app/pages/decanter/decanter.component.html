@@ -1,5 +1,4 @@
       <div class="panel decanter">
-
         <div class="text_title sidetitle">Working principle of decanter centrifuge</div>
         <div class="pros_text">
           <ul>
@@ -20,36 +19,26 @@
         </div>
         <h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>
         <div class="imagecontent">
-
-
-          <div class="imagetextcontent">
-
+          <div class="imagetextcontent" id="target">
             <div *ngFor="let data of this.decanterdata; let i = index" class="imagetext"
-              [ngClass]="{'changecolor': this.selecteddesc == i}">
-
+              [ngClass]="{'changecolor': this.selecteddesc == i}" (click)="scroll()">
               <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
               <div class="item"
                 [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
                 <button class="decbtn" (click)="title(i)">+</button>
-              </div>
-
-
-            </div>
+             </div>
           </div>
-
         </div>
+      </div>
 
         <div class="desc">
           <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
           <div class="desccontent" [innerHtml]="decanterdata[selecteddesc].desc"></div>
         </div>
 
-
-
         <div class="optimize">
           <div class="decpanel">
             <div class="subtitle sidetitle">Decanter optimisation</div>
-
             <div class="image">
               <img src="assets/images/Card2.png">
             </div>
@@ -72,8 +61,6 @@
                   <td>Viscosity (heating)</td>
                   <td>Bowl speed (g-force)</td>
                 </tr>
-
-
               </table>
             </div> -->
           </div>
@@ -109,9 +96,7 @@
                     <p>r = Radius of the particle</p>
                     <p>ω = Angular velocity</p>
                   </div>
-
                 </div>
-
               </div>
 
 
@@ -132,15 +117,11 @@
                   <p>The separation efficiency decreases as the viscosity increases.</p>
                 </div>
               </div>
-
             </div>
           
         <div *ngIf="selectedprocess1" class="selectcontent">
-           
             <div>
-
               <div class="tabletext">
-
                 <div class="text">
                   <p>Differential speed (Δn) → Difference between the bowl and screw speed.</p>
                 </div>
@@ -166,14 +147,12 @@
                       <td>Screw – low torque</td>
                       <td></td>
                     </tr>
-
                   </table>
                 </div>
               </div>
 
 
               <div class="tabletext tabletextlast">
-
                 <div class="text">
                   <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
                   <img src="assets/images/graph-04_1.png">
@@ -199,10 +178,8 @@
                   </table>
                 </div>
               </div>
-
-</div>
             </div>
           </div>
         </div>
-
       </div>
+   </div>
