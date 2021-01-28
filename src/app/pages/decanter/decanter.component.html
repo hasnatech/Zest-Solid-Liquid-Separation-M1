@@ -43,6 +43,9 @@
           <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
           <div class="desccontent" [innerHtml]="decanterdata[selecteddesc].desc"></div>
         </div>
+
+
+
         <div class="optimize">
           <div class="decpanel">
             <div class="subtitle sidetitle">Decanter optimisation</div>
@@ -77,10 +80,14 @@
 
           <div class="process">
             <p><i>Click to explore each of these in detail.</i></p>
-            <div class="subtitle buttontext sidetitle" (click)="selectedprocess = this.selectedprocess ? false : true">
-              Process
-              parameters</div>
-            <div *ngIf="selectedprocess">
+            <div class="flexbutton">
+              <div (click)="process()" class="navbutton"
+                [ngClass]="{'changebg': this.selectedprocess == true}">Process
+                parameters</div>
+             <div (click)="decanter()" class="navbutton" [ngClass]="{'changebg1': this.selectedprocess1 == true}">
+               Decanter parameters</div>
+            </div>
+            <div *ngIf="selectedprocess" class="selectcontent">
               <div class="flexcenter">
                 <p class="subtitle">Terminal settling velocity of the particle under the centrifugal force</p>
                 <div class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;=</div>
@@ -127,11 +134,10 @@
               </div>
 
             </div>
-          </div>
-          <div class="process">
-            <div class="subtitle buttontext sidetitle"
-              (click)="selectedprocess1 = this.selectedprocess1 ? false : true">Decanter parameters</div>
-            <div *ngIf="selectedprocess1">
+          
+        <div *ngIf="selectedprocess1" class="selectcontent">
+           
+            <div>
 
               <div class="tabletext">
 
@@ -170,7 +176,7 @@
 
                 <div class="text">
                   <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
-                  <img src="assets/images/graph-04.png">
+                  <img src="assets/images/graph-04_1.png">
                 </div>
                 <div class="table">
                   <table>
@@ -194,7 +200,7 @@
                 </div>
               </div>
 
-
+</div>
             </div>
           </div>
         </div>

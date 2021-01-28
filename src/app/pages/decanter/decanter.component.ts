@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-decanter',
@@ -15,16 +15,18 @@ export class DecanterComponent implements OnInit {
   para = true;
   playVideo = false;
   selecteddesc = 0;
-  selectedprocess = false
+  selectedprocess = true
   selectedprocess1 = false
   image1 = false
   image2 = false
   image3 = false;
   buttonchange = false;
   header = true;
+  scrollObject: any;
+  idCount: any;
   constructor() { }
-
   ngOnInit(): void {
+    
   }
   decanterdata = [
     {
@@ -78,8 +80,22 @@ export class DecanterComponent implements OnInit {
   title(n) {
     this.decanterdata[n].selected = true;
     this.selecteddesc = n;
-
-
+  }
+  /*scrollTo(target: HTMLElement) {
+    const parentOffset = 0;
+    const y = target.offsetTop - 0 - parentOffset;
+    window.scrollBy(0, y);
+  }*/
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
+  process(){
+     this.selectedprocess = true
+     this.selectedprocess1 = false
+  }
+  decanter(){
+    this.selectedprocess1 = true;
+    this.selectedprocess = false
 
   }
 }

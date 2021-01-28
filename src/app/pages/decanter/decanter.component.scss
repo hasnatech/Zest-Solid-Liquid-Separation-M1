@@ -53,7 +53,7 @@
 
        .process {
          margin-bottom: 50px;
-
+         text-align: center;
          .flexcenter {
            display: flex;
            align-items: center;
@@ -89,11 +89,12 @@
      }
 
      .flexbetween {
-       max-width: 80%;
+       max-width: 90%;
        margin: 0 auto;
        display: flex;
        align-items: baseline;
        justify-content: space-between;
+       margin-bottom: 20px;
 
        .samebg {
          background-color: #fff;
@@ -353,7 +354,7 @@
 
 
      text-align: left;
-     background-color: #52ADA1;
+     background-color: #005F86;
      border-radius: 20px;
      padding: 40px 60px;
      height: 100px;
@@ -471,5 +472,48 @@
      to {
        opacity: 1;
 
+     }
+   }
+
+
+   .flexbutton{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+     .navbutton{
+       width: 50%;
+       background-color: #52ADA1;
+       text-align: center;
+      
+       border-top-left-radius: 25px;
+       border-top-right-radius: 25px;
+       padding: 25px;
+       cursor: pointer;
+       font-size: 25px;
+     }
+   
+   }
+
+   .selectcontent{
+     background-color: #005F86;
+     padding: 20px 0px;
+     animation: show 0.5s ease-in-out forwards;
+       border-bottom-left-radius: 25px;
+       border-bottom-right-radius: 25px;
+   }
+.flexbutton{
+   .changebg,.changebg1{
+     background-color: #005F86;
+     transition: all 0.5s;
+   }
+   }
+
+   @keyframes show {
+     0%{
+       opacity: 0;
+     }
+     100%{
+       opacity: 1;
      }
    }
