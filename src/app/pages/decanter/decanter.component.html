@@ -30,7 +30,7 @@
               <div (click)="title(i)" [innerHtml]="data.title" class="buttontitle"></div>
               <div class="item"
                 [ngClass]="{'active': this.selecteddesc == i , 'not-selected' : data.selected != true }">
-                <button class="decbtn" (click)="title(i)">+</button>
+                <button class="decbtn" (click)="title(i)">{{i+1}}</button>
               </div>
 
 
