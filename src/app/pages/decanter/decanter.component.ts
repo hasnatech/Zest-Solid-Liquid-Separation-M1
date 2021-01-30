@@ -26,7 +26,7 @@ export class DecanterComponent implements OnInit {
   idCount: any;
   constructor() { }
   ngOnInit(): void {
-    
+
   }
   decanterdata = [
     {
@@ -73,7 +73,7 @@ export class DecanterComponent implements OnInit {
       desc: `High-quality stainless steel is used for all product-wetted areas. The bowl and scroll body are made of high-strength centrifugal Duplex stainless steel casting.`,
       selected: false
     },
-    
+
   ]
 
 
@@ -81,17 +81,24 @@ export class DecanterComponent implements OnInit {
     this.decanterdata[n].selected = true;
     this.selecteddesc = n;
   }
-  
-  process(){
-     this.selectedprocess = true
-     this.selectedprocess1 = false
+
+  process() {
+    this.selectedprocess = true
+    this.selectedprocess1 = false
   }
-  decanter(){
+  decanter() {
     this.selectedprocess1 = true;
     this.selectedprocess = false
 
   }
   scroll() {
     document.querySelector('#target').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  selectedTab = 1;
+
+  tab(n) {
+    this.selectedTab = n;
+
   }
 }
