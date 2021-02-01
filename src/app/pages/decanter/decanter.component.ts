@@ -98,7 +98,15 @@ export class DecanterComponent implements OnInit {
   selectedTab = 1;
 
   tab(n) {
+    
     this.selectedTab = n;
-
+    
+  
   }
+
+hide(){
+  
+     this.selectedTab = 1
+ 
+}
 }

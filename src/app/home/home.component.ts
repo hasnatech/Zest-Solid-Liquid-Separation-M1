@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   items = [{
     image: "assets/images/Card1.png",
     videoimge: "assets/images/decanter_play.png",
-    text: "Centrifugal separation",
+    text: "Centrifugal Separation",
     text1: "Working principle of decanter centrifuge",
     defn: `Centrifugal force is used to induce separation.`,
     pros: `<ul><li>In case of solid-liquid slurry, solid particles experience a force, pushed towards the wall and get collected.</li>
