@@ -9,7 +9,7 @@
   background-image: url('../../assets/images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  /*height: 100vh;*/
 }
 
 .panal_text {
@@ -38,7 +38,7 @@
   text-align: left;
   color: $primary;
 
- 
+
 }
 
 .img_text {
@@ -284,9 +284,9 @@
       background-position: center;
       background-size: cover;
       height: 100%;
-      border-radius: 17px;
-     // border-top-left-radius: 17px;
-    //  border-top-right-radius: 17px;
+      border-radius: 17px 17px 0 0;
+      // border-top-left-radius: 17px;
+      //  border-top-right-radius: 17px;
     }
 
     .iframe {
@@ -295,9 +295,9 @@
       height: 100%;
       border: 0;
       transition: height 0.5s ease;
-       border-radius: 17px;
-     // border-top-left-radius: 17px;
-    //  border-top-right-radius: 17px;
+      border-radius: 17px;
+      // border-top-left-radius: 17px;
+      //  border-top-right-radius: 17px;
 
     }
 
@@ -656,17 +656,6 @@
 }
 
 
-.flex {
-  display: flex;
-
-  &.flex-row {
-    flex-direction: column;
-  }
-
-  .flex-1 {
-    flex: 1;
-  }
-}
 
 
 @keyframes zoomin {
@@ -695,7 +684,8 @@
   height: 88vh;
   overflow: hidden;
 }
- .text-center {
-   max-width: 100%;
-   text-align: center;
- }
+
+.text-center {
+  max-width: 100%;
+  text-align: center;
+}

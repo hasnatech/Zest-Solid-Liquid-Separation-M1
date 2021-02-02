@@ -12,17 +12,7 @@
     </ul>
   </div>
 
-  <div class="text-center">
-    <p class="flexalignend">Click &nbsp;<span><a target="blank" href="https://www.youtube.com/watch?v=FhS5vN4r5LA"> <img
-            src="assets/images/play.png"></a></span> &nbsp;to view the working
-      principle of
-      the
-      Decanter Centrifuge.</p>
-    <!--<p><b><i>Click to view the working principle of the Decanter Centrifuge:</i></b></p>
-    
-    <a href="https://www.youtube.com/watch?v=FhS5vN4r5LA"
-      target="blank">https://www.youtube.com/watch?v=FhS5vN4r5LA</a>-->
-  </div>
+
   <!--<h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>-->
   <div class="imagecontent">
     <div class="imagetextcontent" id="target">
@@ -35,18 +25,37 @@
       </div>
     </div>
   </div>
-
+  <div class="text-center">
+    <p class="flexalignend">Click to explore the components of the Decanter Centrifuge.</p>
+  </div>
   <div class="desc">
     <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
     <div class="desccontent" [innerHtml]="decanterdata[selecteddesc].desc"></div>
   </div>
 
+
+  <div class="text-center">
+    <p class="flexalignend">Click to view the working principle of the Decanter Centrifuge:</p>
+    <div class="flex fcenter">
+      <a class="play-a" target="_blank" href="https://www.youtube.com/watch?v=FhS5vN4r5LA">
+        <div class="play-btn">
+          <div>
+            Decanter Centrifuge Technology
+          </div>
+          <div>
+            <img src="assets/images/play.png" alt="YT">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <div class="optimize">
     <div class="decpanel">
       <div class="subtitle sidetitle">Decanter Optimization</div>
-      <div class="image">
+      <!-- <div class="image">
         <img src="assets/images/Card2.png">
-      </div>
+      </div> -->
 
       <!-- <div class="table toptable">
         <table>
@@ -71,35 +80,28 @@
     </div>
 
     <div class="process">
-      <p class="primary_text"><i>Click to explore each of these in detail.</i></p>
+      <!-- <p class="primary_text"><i>Click to explore each of these in detail.</i></p> -->
 
       <div class="flexbutton">
+        <div class="selectcontent"
+          [ngClass]="{'selectedTab': this.selectedTab == 1 , 'selectedTab1': this.selectedTab != 1}">
+          <div class="tab-content info-content">
 
-
-
-<div class="selectcontent" [ngClass]="{'selectedTab': this.selectedTab == 1 , 'selectedTab1': this.selectedTab != 1}">
-  
-   
-   <div class="tab-content">
-     <div class="navbutton"></div>
-     <div class="">
-        <div class="image">
-          <img src="assets/images/Card2.png">
+            <div class="">
+              <div class="image">
+                <img src="assets/images/image-cutting.png">
+              </div>
+              <div class="medium-font">
+                <p class="white_text widthdecreae text-center">Process parameters such as the feed rate, particle size
+                  and
+                  viscosity, whereas
+                  decanter parameters such as differential speed, pond depth and bowl speed can be adjusted to
+                  optimize the performance of the decanter. </p>
+                <p><i>Click the tabs on the right to explore each of these in detail.</i></p>
+              </div>
+            </div>
+          </div>
         </div>
-       <p class="white_text widthdecreae text-center">Process parameters such as the feed rate, particle size and viscosity, whereas
-         decanter parameters such as differential speed, pond depth and bowl speed can be adjusted to
-         optimize the performance of the decanter. </p>
-     <p><i>Click the tabs on the right to explore each of these in detail.</i></p>
-      
-     </div>
-
-   </div>
-     
-      
-    
-
-
-</div>
 
         <div class="selectcontent"
           [ngClass]="{'selectedTab': this.selectedTab == 2 , 'selectedTab2': this.selectedTab != 1 && this.selectedTab == 2}">
@@ -107,54 +109,63 @@
             <div class="navbutton" (click)="tab(2)">Process
               Parameters</div>
 
-               <div class="dummynavbutton" (click)="hide()">Process
-                 Parameters</div>
-              <div class="hidetab">
-            <div class="flexcenter">
-              <p class="subtitle white_text">Terminal settling velocity of the particle under the centrifugal force
-              </p>
-              <div class="subtitle white_text">&nbsp;&nbsp;&nbsp;&nbsp;=</div>
-              <div class="image">
-                <img src="assets/images/eqn.png">
-              </div>
-            </div>
-
-            <div class="eqndefn">
-              <div class="flex">
-                <div class="flex-1">
-                  <P>V<sub>t</sub> = Terminal settling velocity of the particle</P>
-                  <p>d = Diameter of the particle</p>
-                  <p>ρ<sub>p</sub> = Density of the particle</p>
-                  <p>ρ<sub>L</sub> = Density of the fluid</p>
+            <div class="dummynavbutton" (click)="hide()">Process
+              Parameters</div>
+            <div class="hidetab">
+              <div class="flexcenter">
+                <div class="subtitle white_text">Terminal settling velocity of the particle under the centrifugal
+                  force = V<sub>t</sub> = </div>
+                <div class="flex flex-col formula white_text">
+                  <div>d<sup>2</sup> x (ρ<sub>p</sub> - ρ<sub>L</sub>)</div>
+                  <div class="dash"></div>
+                  <div>18µ</div>
                 </div>
 
-                <div class="flex-1">
-                  <p>µ = Viscosity of the fluid</p>
-                  <p>r = Radius of the particle</p>
-                  <p>ω = Angular velocity</p>
+                <div class="white_text">
+                  &nbsp; x rω<sup>2</sup>
+                </div>
+
+                <!-- <div class="image">
+                  <img src="assets/images/eqn.png">
+                </div> -->
+              </div>
+
+              <div class="eqndefn">
+                <div class="flex">
+                  <div class="flex-1">
+                    <P>V<sub>t</sub> = Terminal settling velocity of the particle</P>
+                    <p>d = Diameter of the particle</p>
+                    <p>ρ<sub>p</sub> = Density of the particle</p>
+                    <p>ρ<sub>L</sub> = Density of the fluid</p>
+                  </div>
+
+                  <div class="flex-1">
+                    <p>µ = Viscosity of the fluid</p>
+                    <p>r = Radius of the particle</p>
+                    <p>ω = Angular velocity</p>
+                  </div>
                 </div>
               </div>
-            </div>
-             
 
-            <div class="flexbetween">
-              <div class="samebg content1" [ngClass]="{'showimage': image1 == true}">
-                <div class="graphtitle" (click)="this.image1 = true">Feed Rate</div>
-                <img src="assets/images/graph-01.png">
-                <p>The separation efficiency decreases as the feed rate increases.</p>
+
+              <div class="flexbetween">
+                <div class="samebg content1" [ngClass]="{'showimage': image1 == true}">
+                  <div class="graphtitle" (click)="this.image1 = true">Feed Rate</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency decreases as the feed rate increases.</p>
+                </div>
+                <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
+                  <div class="graphtitle" (click)="this.image2 = true">Particle Size</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency increases as the particle size increases.</p>
+                </div>
+                <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
+                  <div class="graphtitle" (click)="this.image3 = true">Viscosity</div>
+                  <img src="assets/images/graph-01.png">
+                  <p>The separation efficiency decreases as the viscosity increases.</p>
+                </div>
               </div>
-              <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
-                <div class="graphtitle" (click)="this.image2 = true">Particle Size</div>
-                <img src="assets/images/graph-01.png">
-                <p>The separation efficiency increases as the particle size increases.</p>
-              </div>
-              <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
-                <div class="graphtitle" (click)="this.image3 = true">Viscosity</div>
-                <img src="assets/images/graph-01.png">
-                <p>The separation efficiency decreases as the viscosity increases.</p>
-              </div>
-            </div>
-            <p class="bottompad"><i>Click to explore each of these in detail</i></p>
+              <p class="bottompad"><i>Click to explore each of these in detail</i></p>
             </div>
           </div>
         </div>
@@ -163,7 +174,7 @@
           <div class="tab-content">
             <div class="navbutton" (click)="tab(3)">
               Decanter Parameters</div>
-               <div class="dummynavbutton" (click)="hide()">Decanter Parameters</div>
+            <div class="dummynavbutton" (click)="hide()">Decanter Parameters</div>
             <div>
               <div class="tabletext">
                 <div class="text">
@@ -185,27 +196,27 @@
                   </ul>
                 </div>
                 <div class="table">
-                 <h2>Pond Depth</h2>
-                 <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
-                 <img src="assets/images/graph-04_1.png">
+                  <h2>Pond Depth</h2>
+                  <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
+                  <img src="assets/images/graph-04_1.png">
 
-                 <p>If the depth of the pond is deep, it leads to:</p>
-                 <ul>
-                   <li>More room for liquid clarification</li>
-                   <li>Clean filtrate</li>
-                   <li>Wet cake</li>
-                 </ul>
-                 <p>If the pond is shallow, it leads to:</p>
-                 <ul>
-                   <li>Dirty filtrate</li>
-                   <li>Dry cake</li>
-                 </ul>
+                  <p>If the depth of the pond is deep, it leads to:</p>
+                  <ul>
+                    <li>More room for liquid clarification</li>
+                    <li>Clean filtrate</li>
+                    <li>Wet cake</li>
+                  </ul>
+                  <p>If the pond is shallow, it leads to:</p>
+                  <ul>
+                    <li>Dirty filtrate</li>
+                    <li>Dry cake</li>
+                  </ul>
                 </div>
               </div>
 
 
-             
-               <!-- <div class="table">
+
+              <!-- <div class="table">
                   <table>
                     <tr>
                       <th>Deep</th>
@@ -225,11 +236,11 @@
                     </tr>
                   </table>
                 </div>-->
-            
+
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>

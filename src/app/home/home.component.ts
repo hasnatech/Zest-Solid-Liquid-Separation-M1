@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
     image: "assets/images/Card1.png",
     videoimge: "assets/images/decanter_play.png",
     text: "Centrifugal Separation",
-    text1: "Working principle of decanter centrifuge",
+    text1: "Basics of Centrifugal Separation",
     defn: `Centrifugal force is used to induce separation.`,
     pros: `<ul><li>In case of solid-liquid slurry, solid particles experience a force, pushed towards the wall and get collected.</li>
     <li>In case of liquid-liquid system, heavier liquid having higher density are pushed towards the wall and get collected.</li>
