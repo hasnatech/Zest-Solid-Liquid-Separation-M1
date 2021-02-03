@@ -30,6 +30,33 @@
   overflow-y: auto;
 }
 
+.play-a {
+
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.play-btn {
+  background-color: $primary;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+}
+
 .back_img {
   position: relative;
   background-image: url('../../../assets/images/img.png');
@@ -208,6 +235,7 @@
     }
   }
 }
+
 .flexalignend {
   display: flex;
   align-items: center;
