@@ -691,3 +691,17 @@
   max-width: 100%;
   text-align: center;
 }
+.opacity{
+  opacity: 0;
+}
+.imagetextcontent {
+  
+  position: relative;
+  text-align: center;
+  background-image: url('../../assets/images/Card2_new_arrow.png');
+  width: 1100px;
+  margin: 0 auto;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
