@@ -12,13 +12,15 @@ import { SafePipe } from './pipes/safe.pipe';
 
 import { StackDiskCentrifugeComponent } from './pages/stack-disk-centrifuge/stack-disk-centrifuge.component';
 import { DecanterComponent } from './pages/decanter/decanter.component';
+import { AudioplayerComponent } from './audioplayer/audioplayer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SafePipe,
     StackDiskCentrifugeComponent,
-    DecanterComponent
+    DecanterComponent,
+    AudioplayerComponent
   ],
   imports: [
     BrowserModule,

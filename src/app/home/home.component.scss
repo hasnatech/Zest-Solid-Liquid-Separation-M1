@@ -705,3 +705,14 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.back_img {
+  position: relative;
+  background-image: url('../../assets/images/img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 700px;
+  height: 575px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}

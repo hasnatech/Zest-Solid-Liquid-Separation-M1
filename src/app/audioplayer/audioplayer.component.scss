@@ -1,0 +1,86 @@
+@import "../../variable";
+
+.footer {
+
+  z-index: 101;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  border-top: 1px solid #cecece;
+
+  .audioplayer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    padding-bottom: 5px;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+
+
+    .timer {
+      color: $primary;
+      margin: 0 20px;
+      font-size: 80%;
+    }
+
+    .play {
+      img {
+        width: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .slider {
+      position: relative;
+      //background-color: darkgoldenrod;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //align-items: center;
+
+      .line,
+      .filler {
+        position: absolute;
+        width: 100%;
+      }
+
+      .line {
+        height: 1px;
+        background-color: #ccc;
+      }
+
+      .filler {
+        height: 1px;
+        width: 50%;
+        background-color: $primary;
+      }
+
+      $size:12px;
+
+      .thumb {
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background-color: $primary;
+        display: none;
+      }
+
+    
+    }
+  }
+}
+
+.audiocontroller {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  display: none;
+}
+
+.disable {
+  opacity: 0.5;
+}

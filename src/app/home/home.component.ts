@@ -4,6 +4,7 @@ import {
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
+import { MainService } from 'src/app/service/main.service';
 import {
   DomSanitizer,
   SafeHtml,
@@ -35,10 +36,11 @@ export class HomeComponent implements OnInit {
   image3 = false;
   buttonchange = false;
   header = true;
-  constructor(protected sanitizer: DomSanitizer) { }
+  constructor(protected sanitizer: DomSanitizer, private service : MainService) { }
 
   ngOnInit(): void {
-
+    this.service.animate();
+    this.service.setAudio('');
   }
   items = [{
     image: "assets/images/Card1.png",
@@ -169,6 +171,7 @@ depth in the bowl. The liquid overflow is then collected in a centrate chamber a
     //this.hidden = false;
     this.playVideo = false;
     this.header = true
+    this.service.setAudio('')
   }
   hide() {
     this.selectedItem = -1;

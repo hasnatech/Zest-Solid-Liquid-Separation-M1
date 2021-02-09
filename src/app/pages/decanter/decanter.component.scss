@@ -131,7 +131,7 @@
   }
 
   .flexbetween {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -526,9 +526,14 @@
 
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    padding: 25px;
+    padding: 25px 35px;
     cursor: pointer;
     font-size: 36px;
+
+    .closeitem{
+      display: none;
+    }
+     
   }
 
   .dummynavbutton {
@@ -573,7 +578,15 @@
       //transform: rotate(90deg);
       transform-origin: top left;
       transform: rotate(0deg) translate(0px, 0px);
-      display: none;
+     // display: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     cursor: default;
+      .closeitem {
+        display: block;
+        cursor: pointer;
+      }
     }
 
     .dummynavbutton {

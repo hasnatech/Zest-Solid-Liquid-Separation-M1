@@ -1,0 +1,21 @@
+<section class="footer">
+  <div class="audioplayer flex fcenter" [ngClass]="{'disable' : service.getAudio() == 'assets/media/'}">
+    <div class="buttons">
+      <div class="play">
+        <img (click)="audioPP()" [src]="play == false ? 'assets/images/play.svg' : 'assets/images/pause.svg'"
+          alt="Play">
+      </div>
+    </div>
+    <div class="flex-1 flex">
+      <div class="timer">{{currentTimeStr}}</div>
+      <div id="slider" class="slider flex-1 " (mousedown)="mouseDown($event)" (mouseup)="audioPlay()">
+        <div class="line"></div>
+        <div class="filler" [style.width]="(this.currentTime/this.totalTime * 100 )+ '%'"></div>
+        <div class="thumb" [style.left]="(this.currentTime/this.totalTime * 100 )+ '%'" cdkDragLockAxis="x"
+          cdkDragBoundary=".slider" cdkDrag></div>
+      </div>
+      <div class="timer">{{totalTimeStr}}</div>
+    </div>
+  </div>
+</section>
+<audio class="audiocontroller hide" autoplay #audioPlayer controls src="{{service.getAudio()}}"></audio>

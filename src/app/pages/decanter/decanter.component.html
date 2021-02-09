@@ -1,20 +1,25 @@
 <div class="panel decanter">
-  <div class="text_title sidetitle">Working Principle of Decanter Centrifuge</div>
+  <div class="text_title sidetitle" data-animatename="step1" data-animatetime='1'>Working Principle of Decanter
+    Centrifuge</div>
   <div class="pros_text">
     <ul>
-      <li>The decanter centrifuge uses centrifugal forces that can be well beyond 3000 times greater than
+      <li data-animatename="step1" data-animatetime='2'>The decanter centrifuge uses centrifugal forces that can be well
+        beyond 3000 times greater than
         gravity</li>
-      <li>Solid particles are pressed outwards against the rotating bowl wall, while the less dense liquid phase
+      <li data-animatename="step1" data-animatetime='10'>Solid particles are pressed outwards against the rotating bowl
+        wall, while the less dense liquid phase
         forms a concentric inner layer</li>
-      <li>The sediment formed by the solids is continuously removed by the screw conveyor, which rotates at a
+      <li data-animatename="step1" data-animatetime='19'>The sediment formed by the solids is continuously removed by the
+        screw conveyor, which rotates at a
         different speed than the bowl</li>
-      <li>The solids are gradually “ploughed” out and removed from the conical part as a result</li>
+      <li data-animatename="step1" data-animatetime='29'>The solids are gradually “ploughed” out and removed from the
+        conical part as a result</li>
     </ul>
   </div>
 
 
   <!--<h3 class="text-center">Decanter Centrifuge Technology - <u>Click to view</u></h3>-->
-  <div class="imagecontent">
+  <div class="imagecontent" data-animatename="step1" data-animatetime='35'>
     <div class="imagetextcontent" id="target">
       <div *ngFor="let data of this.decanterdata; let i = index" class="imagetext"
         [ngClass]="{'changecolor': this.selecteddesc == i}" (click)="scroll()">
@@ -25,18 +30,19 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
+  <div class="text-center" data-animatename="step1" data-animatetime='35'>
     <p class="flexalignend"><i>Click to explore the components of the Decanter Centrifuge.</i></p>
   </div>
-  <div class="desc">
+  <div class="desc" data-animatename="step1" data-animatetime='35'>
     <div class="desctitle sidetitle" [innerHtml]="decanterdata[selecteddesc].title"></div>
     <div class="desccontent" [innerHtml]="decanterdata[selecteddesc].desc"></div>
   </div>
 
 
   <div class="text-center">
-    <p class="flexalignend"><i>Click to view the working principle of the Decanter Centrifuge.</i></p>
-    <div class="flex fcenter">
+    <p class="flexalignend" data-animatename="step1" data-animatetime='36'><i>Click to view the working principle of the
+        Decanter Centrifuge.</i></p>
+    <div class="flex fcenter" data-animatename="step1" data-animatetime='37'>
       <a class="play-a" target="_blank" href="https://www.youtube.com/watch?v=FhS5vN4r5LA">
         <div class="play-btn">
           <div>
@@ -50,7 +56,7 @@
     </div>
   </div>
 
-  <div class="optimize">
+  <div class="optimize" data-animatename="step1" data-animatetime='38'>
     <div class="decpanel">
       <div class="subtitle sidetitle">Decanter Optimization</div>
       <!-- <div class="image">
@@ -106,11 +112,13 @@
         <div class="selectcontent"
           [ngClass]="{'selectedTab': this.selectedTab == 2 , 'selectedTab2': this.selectedTab != 1 && this.selectedTab == 2}">
           <div class="tab-content">
-            <div class="navbutton" (click)="tab(2)">Process
-              Parameters</div>
+            <div class="navbutton">
+              <div (click)="tab(2)">Process Parameters</div>
+              <div class="closeitem" (click)="hide()">x</div>
+              </div>
 
-            <div class="dummynavbutton" (click)="hide()">Process
-              Parameters</div>
+            <!--<div class="dummynavbutton" (click)="hide()">Process
+              Parameters</div>-->
             <div class="hidetab">
               <div class="flexcenter">
                 <div class="subtitle white_text">Terminal settling velocity of the particle under the centrifugal
@@ -150,17 +158,18 @@
 
               <div class="flexbetween">
                 <div class="samebg content1" [ngClass]="{'showimage': image1 == true}">
-                  <div class="graphtitle" (click)="this.image1 = true">Feed Rate</div>
+                  <div class="graphtitle" (click)="show1()">Feed Rate</div>
                   <img src="assets/images/graph-01.png">
                   <p>The separation efficiency decreases as the feed rate increases.</p>
                 </div>
                 <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
-                  <div class="graphtitle" (click)="this.image2 = true">Particle Size</div>
+                  <div class="graphtitle" (click)="show2()">Feed Rate</div>
+            
                   <img src="assets/images/graph-01.png">
                   <p>The separation efficiency increases as the particle size increases.</p>
                 </div>
                 <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
-                  <div class="graphtitle" (click)="this.image3 = true">Viscosity</div>
+                  <div class="graphtitle" (click)="show3()">Viscosity</div>
                   <img src="assets/images/graph-01.png">
                   <p>The separation efficiency decreases as the viscosity increases.</p>
                 </div>
@@ -172,50 +181,57 @@
         <div class="selectcontent"
           [ngClass]="{'selectedTab': this.selectedTab == 3 , 'selectedTab3': this.selectedTab != 1 && this.selectedTab == 3}">
           <div class="tab-content">
-            <div class="navbutton" (click)="tab(3)">
-              Decanter Parameters</div>
-            <div class="dummynavbutton" (click)="hide()">Decanter Parameters</div>
+            <div class="navbutton">
+              <div (click)="tab(3)">Decanter Parameters</div>
+              
+               <div class="closeitem" (click)="hide()">x</div>
+               </div>
+            <!--<div class="dummynavbutton" (click)="hide()">Decanter Parameters</div>-->
             <div>
               <div class="tabletext">
                 <div class="text">
-                  <h2>Differential Speed</h2>
-                  <p>Differential speed (Δn) → Difference between the bowl and screw speed.</p>
-                  <p>If the differential speed is too high, it leads to:</p>
+                  <h2 data-animatename="step2" data-animatetime='1'>Differential Speed</h2>
+                  <p data-animatename="step2" data-animatetime='1'>Differential speed (Δn) → Difference between the bowl
+                    and screw speed.</p>
+                  <p data-animatename="step2" data-animatetime='9'>If the differential speed is too high, it leads to:
+                  </p>
                   <ul>
-                    <li>Clean filtrate</li>
-                    <li>Wet cake</li>
-                    <li>Under utilization of decanter volume</li>
-                    <li>Low torque of the screw</li>
+                    <li data-animatename="step2" data-animatetime='13'>Clean filtrate</li>
+                    <li data-animatename="step2" data-animatetime='15'>Wet cake</li>
+                    <li data-animatename="step2" data-animatetime='16'>Under utilization of decanter volume</li>
+                    <li data-animatename="step2" data-animatetime='19'>Low torque of the screw</li>
                   </ul>
 
-                  <p>If the differential speed is too low, it leads to:</p>
+                  <p data-animatename="step2" data-animatetime='21'>If the differential speed is too low, it leads to:
+                  </p>
                   <ul>
-                    <li>Dirty filtrate</li>
-                    <li>Dry cake</li>
-                    <li>High torque of the screw</li>
+                    <li data-animatename="step2" data-animatetime='25'>Dirty filtrate</li>
+                    <li data-animatename="step2" data-animatetime='27'>Dry cake</li>
+                    <li data-animatename="step2" data-animatetime='28'>High torque of the screw</li>
                   </ul>
                 </div>
                 <div class="table">
-                  <h2>Pond Depth</h2>
-                  <p>Pond depth (impeller) → Controls the liquid level inside the decanter.</p>
+                  <h2 data-animatename="step2" data-animatetime='31'>Pond Depth</h2>
+                  <p data-animatename="step2" data-animatetime='31'>Pond depth (impeller) → Controls the liquid level
+                    inside the decanter.</p>
 
                   <div class="flex">
                  
                   <div class="flex-1">
-                  <p>If the depth of the pond is deep, it leads to:</p>
+                  <p data-animatename="step2" data-animatetime='38'>If the depth of the pond is deep, it leads to:</p>
                   <ul>
-                    <li>More room for liquid clarification</li>
-                    <li>Clean filtrate</li>
-                    <li>Wet cake</li>
+                    <li data-animatename="step2" data-animatetime='43'>More room for liquid clarification</li>
+                    <li data-animatename="step2" data-animatetime='46'>Clean filtrate</li>
+                    <li data-animatename="step2" data-animatetime='47'>Wet cake</li>
                   </ul>
-                  <p>If the pond is shallow, it leads to:</p>
+                  <p data-animatename="step2" data-animatetime='49'>If the pond is shallow, it leads to:</p>
                   <ul>
-                    <li>Dirty filtrate</li>
-                    <li>Dry cake</li>
+                    <li data-animatename="step2" data-animatetime='51'>Dirty filtrate</li>
+                    <li data-animatename="step2" data-animatetime='52'>Dry cake</li>
                   </ul>
                   </div>
 
-                     <div class="flex-1">
+                     <div class="flex-1" data-animatename="step2" data-animatetime='43'>
                        <img src="assets/images/graph-04_1.png">
                      </div>
                   </div>
