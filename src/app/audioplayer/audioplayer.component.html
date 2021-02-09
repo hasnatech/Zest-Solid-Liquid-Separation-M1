@@ -1,5 +1,5 @@
-<section class="footer">
-  <div class="audioplayer flex fcenter" [ngClass]="{'disable' : service.getAudio() == 'assets/media/'}">
+<section class="footer" [ngClass]="{'disable' : service.getAudio() == 'assets/media/'}">
+  <div class="audioplayer flex fcenter">
     <div class="buttons">
       <div class="play">
         <img (click)="audioPP()" [src]="play == false ? 'assets/images/play.svg' : 'assets/images/pause.svg'"
