@@ -53,7 +53,7 @@
             <!-- <img src="{{this.items[selectedtab].videoimge}}" (click)="playVideo = true" alt=""> -->
           </div>
           <iframe class="iframe flex-1" *ngIf="playVideo == true" width="100%"
-            [src]="this.items[selectedtab].link+'?autoplay=1' | safe:'resourceUrl'" frameborder="0"
+            src="assets/video/v1.mp4" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
@@ -64,6 +64,7 @@
               <div *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
                 <div class="tabcontent">
                   <P [innerHtml]="this.items[selectedtab].defn" class="parag" *ngIf="para"> </P>
+              
                   <div class="tabgroup" [ngClass]="selectedItem == -1 ? 'hide' : 'show'">
                     <div class="tabcontentdata scrollbar" *ngIf="selectedItem == 1"
                       [innerHtml]="this.items[selectedtab].pros"></div>
@@ -78,6 +79,8 @@
           <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon> -->
         </div>
        <p class="subtexts text-center"><i>Click to play the video.</i></p>
+       <p>Click here to explore Stokes’Law. <a href="https://cargill-admin.ancileuperform.com/ucontent/fc999dd78eb548eda8ef1fbd1989f0d2_en-US/index.pdf" target="blank">Stokes’ Law</a></p>
+       <p>Click here to explore The Principle of Centrifugal Separation <a href="https://cargill-admin.ancileuperform.com/ucontent/be638dc2b42c4bb9ae6b7c6dfbf831a7_en-US/index.pdf" target="blank">Principle of Centrifugal Separation</a></p>
       </div>
 
 
