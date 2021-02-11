@@ -25,9 +25,9 @@ import { AudioplayerComponent } from './audioplayer/audioplayer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+
     MatIconModule,
-   
+
     BrowserAnimationsModule
   ],
   providers: [SafePipe],
