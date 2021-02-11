@@ -45,14 +45,17 @@
   </div>
   <div class="videoclass">
     <div class="content" [ngClass]="{'open': this.shown == true}">
-      <div class="fullheight flex flex-col video-panel"
+
+      <div class="videoflow">
+      <div class="fullheight flex-col video-panel"
         *ngIf="this.items[selectedtab].text == 'Centrifugal Separation'">
-        <div class="flex-1">
-          <div class="img" *ngIf="playVideo == false" (click)="playVideo = true"
+        <div class="">
+          <!--<div class="img" *ngIf="playVideo == false" (click)="playVideo = true"
             [style.backgroundImage]="'url('+this.items[selectedtab].videoimge+')'">
-            <!-- <img src="{{this.items[selectedtab].videoimge}}" (click)="playVideo = true" alt=""> -->
-          </div>
-          <video class="iframe flex-1" width="100%" controls *ngIf="playVideo == true" autoplay frameborder="0"
+            <img src="{{this.items[selectedtab].videoimge}}" (click)="playVideo = true" alt="">
+          </div>-->
+          <video class="iframe" width="100%" controls 
+            poster="assets/images/decanter_play1.png"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
             <source src="assets/video/v1.mp4" type="video/mp4">
@@ -63,35 +66,37 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>-->
-        </div>
-        <div class="framedata">
-          <div class="alignflex">
-            <div class="title">{{this.items[selectedtab].text1}}
-              <div *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
-                <div class="tabcontent">
-                  <P [innerHtml]="this.items[selectedtab].defn" class="parag" *ngIf="para"> </P>
-              
-                  <div class="tabgroup" [ngClass]="selectedItem == -1 ? 'hide' : 'show'">
-                    <div class="tabcontentdata scrollbar" *ngIf="selectedItem == 1"
-                      [innerHtml]="this.items[selectedtab].pros"></div>
-                    <div class="tabcontentdata scrollbar" *ngIf="selectedItem == 2"
-                      [innerHtml]="this.items[selectedtab].cons"></div>
+            <div class="framedata">
+              <div class="alignflex">
+                <div class="title">{{this.items[selectedtab].text1}}
+                  <div *ngIf="this.items[selectedtab].text == 'Centrifugal separation'">
+                    <div class="tabcontent">
+                      <P [innerHtml]="this.items[selectedtab].defn" class="parag" *ngIf="para"> </P>
+
+                      <div class="tabgroup" [ngClass]="selectedItem == -1 ? 'hide' : 'show'">
+                        <div class="tabcontentdata scrollbar" *ngIf="selectedItem == 1"
+                          [innerHtml]="this.items[selectedtab].pros"></div>
+                        <div class="tabcontentdata scrollbar" *ngIf="selectedItem == 2"
+                          [innerHtml]="this.items[selectedtab].cons"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <!-- <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
+              <!-- <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
           <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon> -->
+            </div>
         </div>
-       <p class="subtexts text-center"><i>Click to play the video.</i></p>
-       <p>Click <a
-           href="https://cargill-admin.ancileuperform.com/ucontent/fc999dd78eb548eda8ef1fbd1989f0d2_en-US/index.pdf"
-           target="blank">here</a> to explore Stokes’Law.</p>
-       <p>Click <a
-           href="https://cargill-admin.ancileuperform.com/ucontent/be638dc2b42c4bb9ae6b7c6dfbf831a7_en-US/index.pdf"
-           target="blank">here</a> to explore The Principle of Centrifugal Separation Principle of Centrifugal
-           Separation</p>
+           <p class="subtexts text-center"><i>Click to play the video.</i></p>
+           <p>Click <a
+               href="https://cargill-admin.ancileuperform.com/ucontent/fc999dd78eb548eda8ef1fbd1989f0d2_en-US/index.pdf"
+               target="blank">here</a> to explore Stokes’Law.</p>
+           <p class="paddingbottom">Click <a
+               href="https://cargill-admin.ancileuperform.com/ucontent/be638dc2b42c4bb9ae6b7c6dfbf831a7_en-US/index.pdf"
+               target="blank">here</a> to explore The Principle of Centrifugal Separation Principle of Centrifugal
+             Separation</p>
+      </div>
+    
       </div>
 
 
