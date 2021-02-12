@@ -27,11 +27,11 @@
       </div>
       <p class="subtexts text-center"><i>Click each topic to know more.</i></p>
     </div>
-    <div class="imagetextcontent opacity">
+    <div class="imagetextcontent opacity dissolve">
     </div>
-     <div class="back_img opacity"></div>
+    <div class="back_img opacity dissolve"></div>
   </div>
-  
+
 </div>
 
 <div class="fullpage" *ngIf="showvideo">
@@ -47,14 +47,13 @@
     <div class="content" [ngClass]="{'open': this.shown == true}">
 
       <div class="videoflow">
-      <div class="fullheight flex-col video-panel"
-        *ngIf="this.items[selectedtab].text == 'Centrifugal Separation'">
-        <div class="">
-          <!--<div class="img" *ngIf="playVideo == false" (click)="playVideo = true"
+        <div class="fullheight flex-col video-panel" *ngIf="this.items[selectedtab].text == 'Centrifugal Separation'">
+          <div class="">
+            <!--<div class="img" *ngIf="playVideo == false" (click)="playVideo = true"
             [style.backgroundImage]="'url('+this.items[selectedtab].videoimge+')'">
             <img src="{{this.items[selectedtab].videoimge}}" (click)="playVideo = true" alt="">
           </div>-->
-          <video class="iframe" width="100%" controls 
+          <video class="iframe" width="100%" controls autoplay
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
             <source src="assets/video/v1.mp4" type="video/mp4">
@@ -85,44 +84,43 @@
               <!-- <mat-icon *ngIf="hidden" (click)="hide()" class="icon">keyboard_arrow_down</mat-icon>
           <mat-icon *ngIf="shown" (click)="show()" class="icon">keyboard_arrow_up</mat-icon> -->
             </div>
+          </div>
+          <p class="subtexts text-center"><i>Click to play the video.</i></p>
+          <p>Click <a
+              href="https://cargill-admin.ancileuperform.com/ucontent/fc999dd78eb548eda8ef1fbd1989f0d2_en-US/index.pdf"
+              target="_blank">here</a> to explore Stokes’ Law.</p>
+          <p class="paddingbottom">Click <a
+              href="https://cargill-admin.ancileuperform.com/ucontent/be638dc2b42c4bb9ae6b7c6dfbf831a7_en-US/index.pdf"
+              target="_blank">here</a> to explore The Principle of Centrifugal Separation Principle of Centrifugal
+            Separation</p>
         </div>
-           <p class="subtexts text-center"><i>Click to play the video.</i></p>
-           <p>Click <a
-               href="https://cargill-admin.ancileuperform.com/ucontent/fc999dd78eb548eda8ef1fbd1989f0d2_en-US/index.pdf"
-               target="blank">here</a> to explore Stokes’ Law.</p>
-           <p class="paddingbottom">Click <a
-               href="https://cargill-admin.ancileuperform.com/ucontent/be638dc2b42c4bb9ae6b7c6dfbf831a7_en-US/index.pdf"
-               target="blank">here</a> to explore The Principle of Centrifugal Separation Principle of Centrifugal
-             Separation</p>
-      </div>
-    
-      </div>
 
 
+        <!--<div class="close_btn button" (click)="close()">
+        X
+      </div>-->
 
-      <div *ngIf="selectedtab  == 1">
-        <app-decanter></app-decanter>
-      </div>
 
-      <div>
-        <div class="model" [style.backgroundColor]='selectedTab.color' *ngIf="selectedTab != undefined">
-          <div class="text medium-font white-text">
-            <p>{{items}}</p>
-            <p [innerHTML]="selectedTab.description"></p>
+        <div *ngIf="selectedtab  == 1">
+          <app-decanter></app-decanter>
+        </div>
+
+        <div>
+          <div class="model" [style.backgroundColor]='selectedTab.color' *ngIf="selectedTab != undefined">
+            <div class="text medium-font white-text">
+              <p>{{items}}</p>
+              <p [innerHTML]="selectedTab.description"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="panal overfl" *ngIf="selectedtab  == 2">
+            <!--<div class="sidetitle widthtext">Working principle of stack disk centrifuge</div>-->
+            <app-stack-disk-centrifuge></app-stack-disk-centrifuge>
           </div>
         </div>
       </div>
-
-      <div class="">
-        <div class="panal overfl" *ngIf="selectedtab  == 2">
-          <!--<div class="sidetitle widthtext">Working principle of stack disk centrifuge</div>-->
-          <app-stack-disk-centrifuge></app-stack-disk-centrifuge>
-        </div>
-      </div>
-
-      <!--<div class="close_btn button" (click)="close()">
-        X
-      </div>-->
     </div>
   </div>
 </div>

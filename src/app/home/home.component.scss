@@ -1,7 +1,9 @@
 @import '../../variable.scss';
- .dummy{
-   opacity: 0;
- }
+
+.dummy {
+  opacity: 0;
+}
+
 .mainpage {
   overflow: hidden;
   height: 100vh;
@@ -270,14 +272,14 @@
   .content {
     width: 100%;
     height: 100%;
-  
+
     .video-panel {
-      width: 995px;
+      max-width: 995px;
       height: calc(100% - 60px);
-      
+
       margin: 0 auto;
-   margin-top: 30px;
-   margin-bottom: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     border-radius: 17px;
@@ -297,12 +299,12 @@
     .iframe {
       position: relative;
       /*height: 430px;*/
-      height: 560px;
+      //height: 560px;
       border: 0;
       transition: height 0.5s ease;
-     // border-radius: 17px;
-       border-top-left-radius: 17px;
-        border-top-right-radius: 17px;
+      // border-radius: 17px;
+      border-top-left-radius: 17px;
+      border-top-right-radius: 17px;
 
     }
 
@@ -315,8 +317,9 @@
       justify-content: space-between;
       background-color: $primary;
       border-radius: 0 0 17px 17px;
-    position: relative;
-    z-index: 2;
+      position: relative;
+      z-index: 2;
+
       .icon {
         cursor: pointer;
       }
@@ -419,12 +422,13 @@
   }
 
   .open {
-   max-width: 100%;
-   margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
+
     .iframe {
-    height: 560px;
-    
-  
+      //height: 560px;
+
+
     }
   }
 
@@ -469,8 +473,18 @@
     opacity: 0
   }
 }
-
+.dissolve{
+  z-index: -1;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 150px !important;
+}
 @include xl {
+  .mainpage{
+    overflow-y: auto;
+    height:auto;
+  }
   .img_text {
     display: block;
 
@@ -489,6 +503,7 @@
 }
 
 @include lg {
+  
   .fullpage {
 
     .content {
@@ -595,7 +610,7 @@
       }
 
       .text {
-        margin-top: 180px;
+        //margin-top: 180px;
         padding: 10px 15px;
         text-shadow: 2px 2px 4px #000000;
       }
@@ -612,25 +627,16 @@
 
   .fullpage {
     .videoclass {
-      .open {
-        .iframe {
-         
-        }
-      }
-
       .content {
         .framedata {
           font-size: 16px;
-
           .title {
             font-size: 20px;
-            width: 30%;
+            //width: 30%;
           }
-
           .pros {
             font-size: 20px;
           }
-
           .cons {
             font-size: 20px;
           }
@@ -643,16 +649,14 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(1, auto);
-
     .grid {
-
       // border: 2px solid green;
       width: 303px;
-      height: 378px;
+      //height: 378px;
       margin-bottom: 10px;
 
       .text {
-        margin-top: 180px;
+        //margin-top: 180px;
         padding: 10px 15px;
         text-shadow: 2px 2px 4px #000000;
       }
@@ -699,11 +703,13 @@
   max-width: 100%;
   text-align: center;
 }
-.opacity{
+
+.opacity {
   opacity: 0;
 }
+
 .imagetextcontent {
-  
+
   position: relative;
   text-align: center;
   background-image: url('../../assets/images/Card2_new_arrow.png');
@@ -713,6 +719,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .back_img {
   position: relative;
   background-image: url('../../assets/images/img.png');
@@ -728,41 +735,43 @@
 video[poster] {
   height: 100%;
   width: 100%;
-  
+
 }
+
 video:focus {
   outline: none;
 }
 
 .videoflow {
   width: 100%;
-   height: calc(100% - 30px);
+  height: calc(100% - 30px);
   overflow-y: auto;
 }
-.paddingbottom{
+
+.paddingbottom {
   padding-bottom: 20px;
 }
 
-  .videoflow::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #b3cfdb;
-    //   margin: 10px;
-   // margin: 10px;
-  }
+.videoflow::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #b3cfdb;
+  //   margin: 10px;
+  // margin: 10px;
+}
 
-  .videoflow::-webkit-scrollbar {
-    width: 10px;
-    background-color: #679fb6;
-    border-radius: 20px;
-
-
-  }
-
-  .videoflow::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: rgb(255, 255, 255);
+.videoflow::-webkit-scrollbar {
+  width: 10px;
+  background-color: #679fb6;
+  border-radius: 20px;
 
 
-  }
+}
+
+.videoflow::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgb(255, 255, 255);
+
+
+}

@@ -29,7 +29,7 @@ export class DecanterComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.service.animate();
   
-    this.service.setAudio('01.mp3');
+    this.service.setAudio('01_newone.mp3');
   }
   decanterdata = [
     {

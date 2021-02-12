@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
     this.service.setAudio('');
   }
   items = [{
-    image: "assets/images/Card1.png",
+    image: "assets/images/Card1_new.png",
     videoimge: "assets/images/decanter_play.png",
     text: "Centrifugal Separation",
     text1: "Basics of Centrifugal Separation",
