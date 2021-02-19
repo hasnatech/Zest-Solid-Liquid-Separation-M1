@@ -9,7 +9,8 @@
       <li data-animatename="step1" data-animatetime='10'>Solid particles are pressed outwards against the rotating bowl
         wall, while the less dense liquid phase
         forms a concentric inner layer</li>
-      <li data-animatename="step1" data-animatetime='19'>The sediment formed by the solids is continuously removed by the
+      <li data-animatename="step1" data-animatetime='19'>The sediment formed by the solids is continuously removed by
+        the
         screw conveyor, which rotates at a
         different speed than the bowl</li>
       <li data-animatename="step1" data-animatetime='29'>The solids are gradually “ploughed” out and removed from the
@@ -115,7 +116,7 @@
             <div class="navbutton">
               <div (click)="tab(2)">Process Parameters</div>
               <div class="closeitem" (click)="hide()">x</div>
-              </div>
+            </div>
 
             <!--<div class="dummynavbutton" (click)="hide()">Process
               Parameters</div>-->
@@ -164,13 +165,13 @@
                 </div>
                 <div class="samebg content2" [ngClass]="{'showimage': image2 == true}">
                   <div class="graphtitle" (click)="show2()">Particle Size</div>
-            
-                  <img src="assets/images/graph-01.png">
+
+                  <img src="assets/images/graph-02.png">
                   <p>The separation efficiency increases as the particle size increases.</p>
                 </div>
                 <div class="samebg content3" [ngClass]="{'showimage': image3 == true}">
                   <div class="graphtitle" (click)="show3()">Viscosity</div>
-                  <img src="assets/images/graph-01.png">
+                  <img src="assets/images/graph-03.png">
                   <p>The separation efficiency decreases as the viscosity increases.</p>
                 </div>
               </div>
@@ -183,9 +184,9 @@
           <div class="tab-content">
             <div class="navbutton">
               <div (click)="tab(3)">Decanter Parameters</div>
-              
-               <div class="closeitem" (click)="hide()">x</div>
-               </div>
+
+              <div class="closeitem" (click)="hide()">x</div>
+            </div>
             <!--<div class="dummynavbutton" (click)="hide()">Decanter Parameters</div>-->
             <div>
               <div class="tabletext">
@@ -216,24 +217,25 @@
                     inside the decanter.</p>
 
                   <div class="flex">
-                 
-                  <div class="flex-1">
-                  <p data-animatename="step2" data-animatetime='38'>If the depth of the pond is deep, it leads to:</p>
-                  <ul>
-                    <li data-animatename="step2" data-animatetime='43'>More room for liquid clarification</li>
-                    <li data-animatename="step2" data-animatetime='46'>Clean filtrate</li>
-                    <li data-animatename="step2" data-animatetime='47'>Wet cake</li>
-                  </ul>
-                  <p data-animatename="step2" data-animatetime='49'>If the pond is shallow, it leads to:</p>
-                  <ul>
-                    <li data-animatename="step2" data-animatetime='51'>Dirty filtrate</li>
-                    <li data-animatename="step2" data-animatetime='52'>Dry cake</li>
-                  </ul>
-                  </div>
 
-                     <div class="flex-1" data-animatename="step2" data-animatetime='43'>
-                       <img src="assets/images/graph-04_1.png">
-                     </div>
+                    <div class="flex-1">
+                      <p data-animatename="step2" data-animatetime='38'>If the depth of the pond is deep, it leads to:
+                      </p>
+                      <ul>
+                        <li data-animatename="step2" data-animatetime='43'>More room for liquid clarification</li>
+                        <li data-animatename="step2" data-animatetime='46'>Clean filtrate</li>
+                        <li data-animatename="step2" data-animatetime='47'>Wet cake</li>
+                      </ul>
+                      <p data-animatename="step2" data-animatetime='49'>If the pond is shallow, it leads to:</p>
+                      <ul>
+                        <li data-animatename="step2" data-animatetime='51'>Dirty filtrate</li>
+                        <li data-animatename="step2" data-animatetime='52'>Dry cake</li>
+                      </ul>
+                    </div>
+
+                    <div class="flex-1" data-animatename="step2" data-animatetime='43'>
+                      <img src="assets/images/graph-04_1.png">
+                    </div>
                   </div>
                 </div>
               </div>
